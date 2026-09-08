@@ -1,11 +1,11 @@
 ---
 layout: page
-title: projects
+title: research
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Research projects in efficient vision algorithms, foundation-model adaptation, and applied AI systems.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [research, systems]
 horizontal: false
 ---
 

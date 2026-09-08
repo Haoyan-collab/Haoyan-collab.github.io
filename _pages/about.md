@@ -2,33 +2,49 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: ML/AI Research Engineer | Efficient Vision Algorithms | Foundation-Model Adaptation
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>408-590-0658</p>
-    <p>123 your address street</p>
-    <p>Pittsburgh, PA, 15217</p>
+    Carnegie Mellon University
+    <br>
+    Pittsburgh, PA
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
+  scrollable: true
+  limit: 5
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+**Haoyan (Kilian) Shi** is an ML/AI Research Engineer working on efficient vision algorithms and foundation-model adaptation. My work focuses on how modern visual representations can become smaller, more data-efficient, and more reliable in challenging settings such as medical imaging and surgical video.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am currently pursuing an M.S. in Mobile and IoT Engineering at Carnegie Mellon University, after completing a B.Eng. in Computer Science and Technology at Chongqing University. My published work includes papers at IEEE ISBI 2026 and MICCAI 2026, covering efficient segmentation architectures and sparse-supervision video understanding.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Alongside research, I have built production-oriented AI systems. During my AI internship at Ericsson, I developed a hybrid Fusion-RAG search platform with BM25, ChromaDB, Reciprocal Rank Fusion, and LLM-based evaluation. I enjoy working across the full path from model design and empirical validation to deployment.
+
+## Research
+
+- **Efficient vision algorithms** — compact architectures, Vision Transformers, and data-efficient learning
+- **Foundation-model adaptation** — SAM-family models, DINO representations, and task-specific visual adaptation
+- **Video understanding** — sparse supervision, memory mechanisms, and robust long-horizon propagation
+
+My main application domain is medical vision, where limited labels, distribution shift, and long temporal context make these algorithmic problems especially concrete.
+
+## Publications
+
+{% bibliography --query @*[selected=true] %}
+
+## Experience
+
+At Ericsson, I built a production-oriented Fusion-RAG search platform combining BM25, ChromaDB, reciprocal-rank fusion, query reformulation, and an LLM-as-a-Judge evaluation pipeline. This work is part of my engineering experience rather than a publication.
