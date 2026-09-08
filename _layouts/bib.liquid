@@ -1,0 +1,44 @@
+---
+---
+<div class="bib-card">
+  <div class="row">
+    <!-- Teaser Image -->
+    <div class="col-sm-4 bib-preview">
+      {% if entry.preview %}
+        <img class="preview-img" src="{{ entry.preview | prepend: '/assets/img/publication_preview/' | relative_url }}" alt="project preview">
+      {% elsif entry.abbr %}
+        <div class="abbr-badge">{{ entry.abbr }}</div>
+      {% endif %}
+    </div>
+
+    <!-- Publication Content -->
+    <div class="col-sm-8 bib-content">
+      <h3 class="bib-title">{{ entry.title }}</h3>
+      <!-- Highlight your name automatically -->
+      <div class="bib-author">
+        {{ entry.author | replace: 'Shi, Haoyan', '<strong>Shi, Haoyan</strong>' | replace: 'Haoyan Shi', '<strong>Haoyan Shi</strong>' }}
+      </div>
+      <div class="bib-venue"><em>{{ entry.booktitle }}</em>, {{ entry.year }}</div>
+
+      <!-- Action Buttons -->
+      <div class="bib-links">
+        {% if entry.abstract %}
+          <a class="btn btn-sm z-depth-0" role="button" data-toggle="collapse" href="#abs-{{ entry.key }}">Abs</a>
+        {% endif %}
+        {% if entry.pdf %}
+          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" target="_blank">PDF</a>
+        {% endif %}
+        {% if entry.code %}
+          <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" target="_blank">Code</a>
+        {% endif %}
+      </div>
+
+      <!-- Expandable Abstract -->
+      {% if entry.abstract %}
+        <div class="collapse" id="abs-{{ entry.key }}">
+          <p class="bib-abstract mt-3">{{ entry.abstract }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -45,6 +45,17 @@ My main application domain is medical vision, where limited labels, distribution
 
 {% bibliography --query @*[selected=true] %}
 
-## Experience
+## Timeline
 
-At Ericsson, I built a production-oriented Fusion-RAG search platform combining BM25, ChromaDB, reciprocal-rank fusion, query reformulation, and an LLM-as-a-Judge evaluation pipeline. This work is part of my engineering experience rather than a publication.
+<div class="timeline-container">
+  {% for item in site.data.timeline %}
+  <div class="timeline-item">
+    <div class="timeline-date">{{ item.date }}</div>
+    <div class="timeline-content">
+      <div class="timeline-dot"></div>
+      <h4 class="timeline-title">{{ item.title }} <span class="timeline-inst">&middot; {{ item.institution }}</span></h4>
+      <p class="timeline-desc">{{ item.description }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>

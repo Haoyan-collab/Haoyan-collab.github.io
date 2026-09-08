@@ -22,14 +22,17 @@
 @use "teachings";
 @use "typograms";
 
+/* assets/css/main.scss */
 :root {
-  --site-bg: #0d1117;
-  --site-surface: #151b23;
-  --site-border: rgba(139, 148, 158, 0.22);
-  --site-text: #e6edf3;
-  --site-muted: #9da7b3;
-  --site-accent: #39c5d8;
-  --site-accent-soft: rgba(57, 197, 216, 0.12);
+  /* Neutral deep gray, softer than pure black */
+  --site-bg: #121212; 
+  --site-surface: #1e1e1e;
+  --site-border: rgba(255, 255, 255, 0.1);
+  --site-text: #e0e0e0;
+  --site-muted: #9ca3af;
+  /* A sophisticated muted blue, avoiding harsh neon cyan */
+  --site-accent: #7ea8d9; 
+  --site-accent-soft: rgba(126, 168, 217, 0.15);
 }
 
 html,
@@ -103,4 +106,201 @@ a:focus {
   .profile {
     margin-bottom: 2rem;
   }
+}
+
+/* ==========================================================================
+   Timeline component
+   ========================================================================== */
+.timeline-container {
+  position: relative;
+  margin: 2.5rem 0;
+  padding-left: 0.5rem;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Left side: Date */
+.timeline-date {
+  width: 160px;
+  flex-shrink: 0;
+  text-align: right;
+  padding-right: 2rem;
+  padding-top: 0.2rem;
+  color: var(--site-muted);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Right side: Content with border */
+.timeline-content {
+  flex-grow: 1;
+  padding-left: 2rem;
+  border-left: 2px solid var(--site-border);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+/* The dot on the timeline */
+.timeline-dot {
+  position: absolute;
+  left: -7px; /* Align perfectly with the 2px border */
+  top: 0.45rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--site-bg);
+  border: 2px solid var(--site-accent);
+  z-index: 1;
+  transition: background-color 0.2s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  background-color: var(--site-accent);
+}
+
+/* Typography for timeline elements */
+.timeline-title {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--site-text);
+  line-height: 1.4;
+}
+
+.timeline-inst {
+  font-weight: 400;
+  color: var(--site-accent);
+}
+
+.timeline-desc {
+  margin: 0;
+  color: var(--site-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+  }
+  .timeline-date {
+    width: 100%;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .timeline-content {
+    border-left: none;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--site-border);
+  }
+}
+
+/* ==========================================================================
+   Publication Cards
+   ========================================================================== */
+.bib-card {
+  background-color: var(--site-surface);
+  border: 1px solid var(--site-border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bib-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--site-accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.bib-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 6px;
+  border: 1px solid var(--site-border);
+  object-fit: cover;
+}
+
+.abbr-badge {
+  background-color: var(--site-accent-soft);
+  color: var(--site-accent);
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 1px;
+}
+
+.bib-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.bib-author {
+  color: var(--site-text);
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.bib-venue {
+  color: var(--site-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.bib-links .btn {
+  background-color: transparent;
+  color: var(--site-accent);
+  border: 1px solid var(--site-accent);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  text-transform: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.bib-links .btn:hover {
+  background-color: var(--site-accent);
+  color: var(--site-bg);
+}
+
+.bib-abstract {
+  font-size: 0.9rem;
+  color: var(--site-muted);
+  background: var(--site-bg);
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--site-accent);
+}
+/* Remove default list numbering and padding from jekyll-scholar */
+.publications ol.bibliography,
+.publications ul.bibliography {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* Ensure no extra margin pushes the cards out of alignment */
+.publications ol.bibliography li {
+  margin-left: 0;
 }
