@@ -71,6 +71,12 @@ a:focus {
   line-height: 1.75;
 }
 
+.post article,
+.post article p,
+.post article li {
+  overflow-wrap: anywhere;
+}
+
 .projects .card,
 .projects .project-card,
 .publications .row {
