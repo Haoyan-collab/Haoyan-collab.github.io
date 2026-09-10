@@ -9,12 +9,21 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    Carnegie Mellon University
-    <br>
-    Pittsburgh, PA
+      <div style="display: flex; justify-content: space-between; text-align: left;">
+        <div style="margin-right: 10px;">
+          <p><i class="fas fa-map-marker-alt fa-fw"></i> Carnegie Mellon University<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pittsburgh, PA</p>
+        </div>
+        <div>
+          <p><i class="fas fa-envelope fa-fw"></i> haoyans@andrew.cmu.edu<br>
+          <i class="fas fa-phone fa-fw"></i> (408) 590-0658<br>
+          <a href="https://www.linkedin.com/in/kilian-shi" target="_blank"><i class="fab fa-linkedin fa-fw"></i> LinkedIn</a><br>
+          <a href="https://github.com/Haoyan-collab" target="_blank"><i class="fab fa-github fa-fw"></i> GitHub</a></p>
+        </div>
+      </div>
 
-selected_papers: false
-social: true # includes social icons at the bottom of the page
+  selected_papers: false
+  social: false # disables social icons at the bottom of the page
 
 announcements:
   enabled: false
@@ -35,7 +44,7 @@ My research experience includes projects accepted at IEEE ISBI 2026 and MICCAI 2
 
 Alongside academic research, I enjoy building robust, production-oriented AI systems. During my AI engineering internship at Ericsson, I architected an end-to-end Fusion-RAG search platform and built automated evaluation pipelines to improve enterprise query relevance. I value being involved in the full lifecycle of a project, from understanding a problem and designing a model or system to evaluating it carefully and deploying it in practice.
 
-## Research Interests
+**Research Interests**
 
 - **Foundation Models and Representation Learning** — model adaptation, efficient learning, evaluation, and reliable use of pretrained representations.
 - **Language and Multimodal Models** — LLMs, vision-language models, multimodal reasoning, retrieval-augmented systems, and methods for connecting different forms of information.
@@ -44,7 +53,7 @@ Alongside academic research, I enjoy building robust, production-oriented AI sys
 
 My current research background is in medical vision, where limited labels, distribution shifts, and long temporal context make algorithmic problems concrete and meaningful. I am open to learning across domains and would be glad to contribute wherever my experience in representation learning, foundation-model adaptation, experimentation, and system building can be useful.
 
-## Publications
+**Publications**
 
 <div class="publications">
 
@@ -52,7 +61,7 @@ My current research background is in medical vision, where limited labels, distr
 
 </div>
 
-## Timeline
+**Timeline**
 
 <div class="timeline-container">
   {% for item in site.data.timeline %}

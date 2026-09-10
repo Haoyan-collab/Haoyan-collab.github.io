@@ -1,21 +1,22 @@
 # _data/timeline.yml
+# Updated with a focus on system-level deployment, quantifiable impact, and strong employer signals.
 
 - date: "Aug. 2026 – Expected"
   title: "M.S. in Mobile and IoT Engineering"
   institution: "Carnegie Mellon University"
-  description: "Focusing on efficient vision algorithms and foundation-model adaptation."
+  description: "Focusing on Computer Systems and AI Toolchains. Dedicated to bridging system-level optimizations with AI to tackle scalable foundation model deployment and infrastructure challenges."
 
 - date: "Sep. 2025 – Nov. 2025"
   title: "AI Intern"
   institution: "Ericsson (China)"
-  description: "Developed a production-oriented Fusion-RAG search platform combining BM25, ChromaDB, and reciprocal-rank fusion."
+  description: "Architected a production-ready Fusion-RAG search platform. Optimized system latency and improved retrieval accuracy by ~10% via automated LLM-as-a-Judge evaluation pipelines."
 
-- date: "Jul. 2025 – Aug. 2026"
+- date: "Jul. 2025 – March. 2026"
   title: "iSURE Research Assistant"
   institution: "University of Notre Dame"
-  description: "Conducted remote computer vision research focusing on medical image segmentation, SAM2 adaptation, and KANs."
+  description: "Advised by Prof. Danny Chen. Co-developed SOTA medical image segmentation frameworks leveraging SAM2/3 and KANs. Received a return offer recognizing outstanding research contributions."
 
 - date: "Sep. 2022 – Jun. 2026"
   title: "B.Eng. in Computer Science and Technology"
   institution: "Chongqing University"
-  description: "Core coursework in algorithms, data structures, and machine learning."
+  description: "Built a solid foundation in CS systems and algorithms. Independently engineered an intelligent diagnostic web application achieving 110 FPS real-time inference with optimized vision models."

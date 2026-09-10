@@ -369,3 +369,14 @@ code {
 .publications ol.bibliography li {
   margin-left: 0;
 }
+
+/* Override the default profile container width */
+.profile {
+  width: 450px !important; /* Adjust this value (e.g., 400px, 500px) to make it larger */
+}
+
+/* Ensure the image scales correctly within the new container size */
+.profile img {
+  width: 100%;
+  height: auto;
+}
