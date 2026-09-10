@@ -5,18 +5,22 @@
   title: "M.S. in Mobile and IoT Engineering"
   institution: "Carnegie Mellon University"
   description: "Focusing on Computer Systems and AI Toolchains. Dedicated to bridging system-level optimizations with AI to tackle scalable foundation model deployment and infrastructure challenges."
+  type: "edu"
 
 - date: "Sep. 2025 – Nov. 2025"
   title: "AI Intern"
   institution: "Ericsson (China)"
   description: "Architected a production-ready Fusion-RAG search platform. Optimized system latency and improved retrieval accuracy by ~10% via automated LLM-as-a-Judge evaluation pipelines."
+  type: "work"
 
 - date: "Jul. 2025 – March. 2026"
-  title: "iSURE Research Assistant"
+  title: "Research Assistant"
   institution: "University of Notre Dame"
   description: "Advised by Prof. Danny Chen. Co-developed SOTA medical image segmentation frameworks leveraging SAM2/3 and KANs. Received a return offer recognizing outstanding research contributions."
+  type: "research"
 
 - date: "Sep. 2022 – Jun. 2026"
   title: "B.Eng. in Computer Science and Technology"
   institution: "Chongqing University"
   description: "Built a solid foundation in CS systems and algorithms. Independently engineered an intelligent diagnostic web application achieving 110 FPS real-time inference with optimized vision models."
+  type: "edu"

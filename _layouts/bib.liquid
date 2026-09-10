@@ -16,7 +16,15 @@
       <h3 class="bib-title">{{ entry.title }}</h3>
       <!-- Highlight your name automatically -->
       <div class="bib-author">
-        {{ entry.author | replace: 'Shi, Haoyan', '<strong>Shi, Haoyan</strong>' | replace: 'Haoyan Shi', '<strong>Haoyan Shi</strong>' }}
+        {% for author in entry.author_array %}
+          {% unless forloop.first %}{% if forloop.last %} and {% else %}, {% endif %}{% endunless %}
+          {% assign author_name = author.first | append: ' ' | append: author.last %}
+          {% if author.first == 'Haoyan' and author.last == 'Shi' %}
+            <strong>{{ author_name }}</strong>
+          {% else %}
+            {{ author_name }}
+          {% endif %}
+        {% endfor %}
       </div>
       <div class="bib-venue"><em>{{ entry.booktitle }}</em>, {{ entry.year }}</div>
 
