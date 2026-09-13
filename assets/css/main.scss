@@ -50,6 +50,40 @@ body {
 }
 
 body {
+  position: relative;
+}
+
+/* Site-wide Matrix atmosphere; content surfaces remain readable above it. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.12;
+  background: repeating-linear-gradient(180deg, transparent 0 20px, rgba(0, 255, 65, 0.12) 21px 22px, transparent 23px 64px), repeating-linear-gradient(90deg, transparent 0 28px, rgba(0, 255, 65, 0.08) 29px 30px, transparent 31px 96px);
+  background-size: 100% 140px, 180px 100%;
+  animation: matrix-drift 18s linear infinite;
+}
+
+@keyframes matrix-drift {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 0 140px, 180px 0; }
+}
+
+main { position: relative; z-index: 1; }
+
+#matrix-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0.22;
+}
+
+body {
   font-family: "IBM Plex Sans", "Helvetica Neue", sans-serif;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.18);
 }
@@ -331,9 +365,132 @@ main h2::before {
 
 .navbar,
 nav {
-  background-color: rgba(11, 17, 16, 0.82);
+  position: relative;
+  z-index: 2;
+  background-color: rgba(11, 17, 16, 0.76);
   border-bottom-color: var(--site-border);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(18px);
+}
+
+.post,
+main .page,
+main article {
+  position: relative;
+  z-index: 1;
+  padding: clamp(1.5rem, 2.5vw, 2.75rem);
+  background: linear-gradient(145deg, rgba(17, 25, 23, 0.99), rgba(13, 20, 18, 0.985));
+  border: 1px solid rgba(190, 220, 208, 0.11);
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+}
+
+/* A concise research index scans faster than a wall of oversized linked cards. */
+.project-group + .project-group {
+  margin-top: 2.75rem;
+}
+
+.projects .category {
+  margin: 0 0 1.15rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--site-border);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.project-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.project-summary {
+  min-width: 0;
+  padding: 1.35rem 1.45rem 1.4rem;
+  background: rgba(24, 33, 31, 0.98);
+  border: 1px solid rgba(190, 220, 208, 0.1);
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.project-summary:hover {
+  border-color: rgba(142, 213, 181, 0.45);
+}
+
+.project-summary-index {
+  margin: 0 0 0.65rem;
+  color: var(--site-accent);
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+}
+
+.project-summary h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.project-summary-description {
+  margin: 0 0 0.6rem;
+  color: var(--site-muted);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.project-notes-link {
+  display: inline-flex;
+  gap: 0.45rem;
+  align-items: center;
+  color: var(--site-accent);
+  cursor: pointer;
+  font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  list-style: none;
+}
+
+.project-notes-link::-webkit-details-marker {
+  display: none;
+}
+
+.project-notes-link:hover span,
+.project-details[open] .project-notes-link span {
+  transform: translateX(0.2rem);
+}
+
+.project-notes-link span {
+  transition: transform 160ms ease;
+}
+
+.project-details[open] .project-notes-link span {
+  transform: rotate(45deg);
+}
+
+.project-detail-content {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(190, 220, 208, 0.1);
+  color: var(--site-muted);
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+.project-detail-content p {
+  margin: 0 0 0.8rem;
+}
+
+.project-detail-content p:last-child {
+  margin-bottom: 0;
+}
+
+footer, footer.fixed-bottom {
+  position: relative;
+  z-index: 2;
+  background: rgba(11, 17, 16, 0.92);
+  color: var(--site-muted);
+  border-top: 1px solid var(--site-border);
 }
 
 code,
@@ -379,4 +536,17 @@ code {
 .profile img {
   width: 100%;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .post,
+  main .page,
+  main article {
+    padding: 1.35rem;
+    border-radius: 14px;
+  }
+
+  .project-summary-grid {
+    grid-template-columns: 1fr;
+  }
 }

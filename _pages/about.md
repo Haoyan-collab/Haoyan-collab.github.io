@@ -46,7 +46,7 @@ My work lies at the intersection of:
 
 Alongside academic research (publications at **IEEE ISBI 2026** and **MICCAI 2026**), I build robust, production-oriented AI systems. Most recently, as an AI Engineering Intern at **Ericsson**, I architected an end-to-end Fusion-RAG search platform to improve enterprise query relevance.
 
-**I am actively seeking ML/AI Research Assistant (RA) opportunities, as well as Industry Internship opportunities for Summer 2027.**
+**I am actively seeking Part-Time ML/AI opportunities during the academic year, as well as Full-Time Industry Internships for Summer 2027.**
 
 **Publications**
 
@@ -72,6 +72,7 @@ Alongside academic research (publications at **IEEE ISBI 2026** and **MICCAI 202
 </div>
 
 <style>
+/* ================= 原有样式，绝对不动 ================= */
 /* 暗色系 Timeline 强调色样式 */
 .timeline-container {
   border-left: 2px solid #333; /* 暗色系主轴 */
@@ -166,4 +167,7 @@ Alongside academic research (publications at **IEEE ISBI 2026** and **MICCAI 202
 .about-content a:hover, article a:hover {
   text-decoration: underline;
 }
+
 </style>
+
+<script src="{{ '/assets/js/matrix-rain.js' | relative_url }}"></script>

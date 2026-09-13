@@ -7,6 +7,8 @@ nav_order: 5
 description: Curriculum vitae of Haoyan (Kilian) Shi.
 ---
 
+<script src="{{ '/assets/js/matrix-rain.js' | relative_url }}"></script>
+
 <!-- CV Download Button -->
 <div class="text-center mt-3 mb-4">
   <a href="{{ '/assets/pdf/Resume_Kilian.pdf' | relative_url }}" target="_blank" class="btn btn-primary" style="background-color: var(--site-accent); border-color: var(--site-accent); color: var(--site-bg); font-weight: 600; padding: 0.6rem 1.5rem; border-radius: 6px;">

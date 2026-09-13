@@ -18,3 +18,5 @@ nav_order: 2
 {% bibliography %}
 
 </div>
+
+<script src="{{ '/assets/js/matrix-rain.js' | relative_url }}"></script>
