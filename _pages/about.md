@@ -170,4 +170,5 @@ Alongside academic research (publications at **IEEE ISBI 2026** and **MICCAI 202
 
 </style>
 
+<script src="{{ '/assets/js/force-dark-theme.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/matrix-rain.js' | relative_url }}"></script>

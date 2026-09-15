@@ -8,6 +8,7 @@ nav_order: 3
 display_categories: [research, systems]
 ---
 
+<script src="{{ '/assets/js/force-dark-theme.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/matrix-rain.js' | relative_url }}"></script>
 
 <!-- pages/projects.md -->

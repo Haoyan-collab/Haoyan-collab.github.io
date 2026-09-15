@@ -7,6 +7,7 @@ nav_order: 5
 description: Curriculum vitae of Haoyan (Kilian) Shi.
 ---
 
+<script src="{{ '/assets/js/force-dark-theme.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/matrix-rain.js' | relative_url }}"></script>
 
 <!-- CV Download Button -->

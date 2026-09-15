@@ -19,4 +19,5 @@ nav_order: 2
 
 </div>
 
+<script src="{{ '/assets/js/force-dark-theme.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/matrix-rain.js' | relative_url }}"></script>
