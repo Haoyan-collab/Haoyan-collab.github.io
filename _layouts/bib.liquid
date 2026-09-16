@@ -31,7 +31,10 @@
       <!-- Action Buttons -->
       <div class="bib-links">
         {% if entry.abstract %}
-          <a class="btn btn-sm z-depth-0" role="button" data-toggle="collapse" href="#abs-{{ entry.key }}">Abs</a>
+          <details class="bib-abstract-details">
+            <summary class="btn btn-sm z-depth-0">Abs</summary>
+            <p class="bib-abstract mt-3">{{ entry.abstract }}</p>
+          </details>
         {% endif %}
         {% if entry.pdf %}
           <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" target="_blank">PDF</a>
@@ -41,12 +44,6 @@
         {% endif %}
       </div>
 
-      <!-- Expandable Abstract -->
-      {% if entry.abstract %}
-        <div class="collapse" id="abs-{{ entry.key }}">
-          <p class="bib-abstract mt-3">{{ entry.abstract }}</p>
-        </div>
-      {% endif %}
     </div>
   </div>
 </div>
