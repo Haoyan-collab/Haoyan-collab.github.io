@@ -35,7 +35,6 @@ latest_posts:
   scrollable: true
   limit: 3
 ---
-
 Hi, I'm **Haoyan (Kilian) Shi**, an M.S. student at **Carnegie Mellon University**. My interests span **machine learning, computer vision, multimodal learning, and AI systems**.
 
 My research has included **medical image and video understanding, vision foundation models, and efficient and reliable deep learning**. More recently, I'm exploring **multi-agent systems and vision-language-action (VLA) models** for embodied and autonomous systems.
@@ -44,13 +43,13 @@ I also have industry experience in **AI engineering at Ericsson**, where I worke
 
 **I'm currently seeking Summer 2027 ML/AI internships and part-time opportunities during the academic year.**
 
+<div class="about-clear"></div>
+
 <section class="about-publications">
   <h2>Publications</h2>
 
   <div class="publications">
-
-  {% bibliography --query @*[selected=true] %}
-
+    {% bibliography --query @*[selected=true] %}
   </div>
 </section>
 
@@ -166,6 +165,15 @@ I also have industry experience in **AI engineering at Ericsson**, where I worke
   text-decoration: underline;
 }
 
+.about-clear {
+  clear: both;
+  height: 1rem;
+}
+
+.about-publications {
+  clear: both;
+  margin-top: 1.5rem;
+}
 </style>
 
 <script src="{{ '/assets/js/force-dark-theme.js' | relative_url }}"></script>
