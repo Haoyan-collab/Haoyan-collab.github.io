@@ -2,12 +2,12 @@
 layout: about
 title: about
 permalink: /
-subtitle: Computer Vision | AI Systems | Multi-Agent Systems & VLA
+subtitle: Machine Learning | Computer Vision | AI Systems
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
       <div style="display: flex; justify-content: space-between; text-align: left;">
         <div style="margin-right: 10px;">
@@ -22,8 +22,8 @@ profile:
         </div>
       </div>
 
-  selected_papers: false
-  social: false # disables social icons at the bottom of the page
+selected_papers: false
+social: false
 
 announcements:
   enabled: false
@@ -32,17 +32,17 @@ announcements:
 
 latest_posts:
   enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  scrollable: true
+  limit: 3
 ---
 
-Hi, I'm **Haoyan (Kilian) Shi**, an M.S. student at **Carnegie Mellon University** (MSMITE). My work spans computer vision and multimodal learning, production AI systems, and multi-agent/VLA research.
+Hi, I'm **Haoyan (Kilian) Shi**, an M.S. student at **Carnegie Mellon University**. My interests span **machine learning, computer vision, multimodal learning, and AI systems**.
 
-As a Research Assistant in the **Xu Lab**, I study multi-agent systems, vision-language-action (VLA), and agent safety for autonomous laboratory automation. My current work explores architectures that separate high-level planning from constrained execution through compiler-based validation and runtime enforcement.
+My research has included **medical image and video understanding, vision foundation models, and efficient and reliable deep learning**. More recently, I'm exploring **multi-agent systems and vision-language-action (VLA) models** for embodied and autonomous systems.
 
-Previously, I worked on vision foundation models and medical image segmentation, with publications at **IEEE ISBI 2026** and **MICCAI 2026**, and built production AI systems as an AI Engineering Intern at **Ericsson**.
+I also have industry experience in **AI engineering at Ericsson**, where I worked on retrieval, evaluation, and LLM-based systems.
 
-**I am actively seeking Part-Time ML/AI opportunities during the academic year, as well as Full-Time Industry Internships for Summer 2027.**
+**I'm currently seeking Summer 2027 ML/AI internships and part-time opportunities during the academic year.**
 
 <section class="about-publications">
   <h2>Publications</h2>
