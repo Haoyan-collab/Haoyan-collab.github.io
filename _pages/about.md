@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: ML/AI Research Engineer | Foundation Models | Multimodal and Intelligent Systems
+subtitle: Computer Vision | AI Systems | Multi-Agent Systems & VLA
 
 profile:
   align: right
@@ -36,25 +36,23 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi, I'm **Haoyan (Kilian) Shi**. I am an M.S. student at **Carnegie Mellon University** (MSMITE), focusing on making foundation models more capable, efficient, and reliable for real-world systems.
+Hi, I'm **Haoyan (Kilian) Shi**, an M.S. student at **Carnegie Mellon University** (MSMITE). My work spans computer vision and multimodal learning, production AI systems, and multi-agent/VLA research.
 
-My work lies at the intersection of:
-- **Foundation Models & Representation Learning:** Post-training adaptation, efficient learning, and data-prior-guided architectures.
-- **Computer Vision & Multimodal Systems:** Medical image analysis, temporal modeling, and vision-language reasoning.
-- **Production AI & LLM Applications:** Retrieval-augmented generation (RAG) and automated evaluation pipelines.
-- **Embodied & Interactive Intelligence:** Vision-language-action (VLA) models and physical-world AI agents.
+As a Research Assistant in the **Xu Lab**, I study multi-agent systems, vision-language-action (VLA), and agent safety for autonomous laboratory automation. My current work explores architectures that separate high-level planning from constrained execution through compiler-based validation and runtime enforcement.
 
-Alongside academic research (publications at **IEEE ISBI 2026** and **MICCAI 2026**), I build robust, production-oriented AI systems. Most recently, as an AI Engineering Intern at **Ericsson**, I architected an end-to-end Fusion-RAG search platform to improve enterprise query relevance.
+Previously, I worked on vision foundation models and medical image segmentation, with publications at **IEEE ISBI 2026** and **MICCAI 2026**, and built production AI systems as an AI Engineering Intern at **Ericsson**.
 
 **I am actively seeking Part-Time ML/AI opportunities during the academic year, as well as Full-Time Industry Internships for Summer 2027.**
 
-**Publications**
+<section class="about-publications">
+  <h2>Publications</h2>
 
-<div class="publications">
+  <div class="publications">
 
-{% bibliography --query @*[selected=true] %}
+  {% bibliography --query @*[selected=true] %}
 
-</div>
+  </div>
+</section>
 
 **Timeline**
 

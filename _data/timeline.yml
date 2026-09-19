@@ -1,6 +1,12 @@
 # _data/timeline.yml
 # Updated with a focus on system-level deployment, quantifiable impact, and strong employer signals.
 
+- date: "Sep. 2026 – Present"
+  title: "Research Assistant"
+  institution: "Xu Lab, Carnegie Mellon University"
+  description: "Researching multi-agent systems, vision-language-action (VLA), and agent safety for autonomous laboratory automation. Exploring planning/execution separation with compiler-based validation and runtime enforcement."
+  type: "research"
+
 - date: "Aug. 2026 – Expected"
   title: "M.S. in Mobile and IoT Engineering"
   institution: "Carnegie Mellon University"

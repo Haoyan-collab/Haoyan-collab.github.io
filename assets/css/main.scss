@@ -85,7 +85,7 @@ main { position: relative; z-index: 1; }
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  opacity: 0.25;
+  opacity: 0.30;
 }
 
 body {
@@ -304,6 +304,23 @@ main h2::before {
   border-color: var(--site-accent);
   background-color: var(--site-surface-raised);
   box-shadow: 0 16px 32px var(--site-shadow);
+}
+
+/* Keep selected publications on the About page within a dedicated content surface. */
+.about-publications {
+  margin: 2.5rem 0;
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  background: rgba(24, 33, 31, 0.98);
+  border: 1px solid var(--site-border);
+  border-radius: 12px;
+}
+
+.about-publications h2 {
+  margin: 0 0 1.25rem;
+}
+
+.about-publications .bibliography {
+  margin-bottom: 0;
 }
 
 .bib-preview {
