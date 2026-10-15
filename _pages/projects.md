@@ -1,8 +1,8 @@
 ---
 layout: page
-title: research
+title: experience
 permalink: /projects/
-description: Research projects in efficient vision algorithms, foundation-model adaptation, and applied AI systems.
+description: Research projects and industry experience in computer vision, foundation models, and applied AI systems.
 nav: true
 nav_order: 3
 display_categories: [research, systems]

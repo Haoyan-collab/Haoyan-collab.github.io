@@ -41,11 +41,11 @@ My research has included **medical image and video understanding, vision foundat
 
 I also have industry experience in **AI engineering at Ericsson**, where I worked on retrieval, evaluation, and LLM-based systems.
 
-**I'm currently seeking Summer 2027 ML/AI internships and part-time opportunities during the academic year.**
+**I'm currently seeking Summer 2027 ML/AI internships.**
 
 <div class="about-clear"></div>
 
-<section class="about-publications">
+<section class="about-publications" id="publications">
   <h2>Publications</h2>
 
   <div class="publications">

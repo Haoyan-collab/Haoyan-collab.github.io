@@ -7,7 +7,7 @@
   description: "Researching multi-agent systems, vision-language-action (VLA), and agent safety for autonomous laboratory automation. Exploring planning/execution separation with compiler-based validation and runtime enforcement."
   type: "research"
 
-- date: "Aug. 2026 – Expected"
+- date: "Aug. 2026 – May 2028 (expected)"
   title: "M.S. in Mobile and IoT Engineering"
   institution: "Carnegie Mellon University"
   description: "Focusing on Computer Systems and AI Toolchains. Dedicated to bridging system-level optimizations with AI to tackle scalable foundation model deployment and infrastructure challenges."
@@ -19,10 +19,10 @@
   description: "Architected a production-ready Fusion-RAG search platform. Optimized system latency and improved retrieval accuracy by ~10% via automated LLM-as-a-Judge evaluation pipelines."
   type: "work"
 
-- date: "Jul. 2025 – March. 2026"
-  title: "Research Assistant"
+- date: "Jul. 2025 – Present"
+  title: "Research Intern (ISURE) & Research Collaborator"
   institution: "University of Notre Dame"
-  description: "Advised by Prof. Danny Chen. Co-developed SOTA medical image segmentation frameworks leveraging SAM2/3 and KANs. Received a return offer recognizing outstanding research contributions."
+  description: "On-site ISURE internship through Sep. 2025, followed by ongoing remote collaboration with Prof. Danny Chen on medical image and video segmentation."
   type: "research"
 
 - date: "Sep. 2022 – Jun. 2026"
