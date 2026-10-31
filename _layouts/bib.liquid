@@ -34,9 +34,6 @@
 
       <!-- Action Buttons -->
       <div class="bib-links">
-        {% if entry.doi %}
-          <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" target="_blank" rel="noopener noreferrer">Paper (DOI)</a>
-        {% endif %}
         {% if entry.abstract %}
           <details class="bib-abstract-details">
             <summary class="btn btn-sm z-depth-0">Abs</summary>
@@ -44,7 +41,7 @@
           </details>
         {% endif %}
         {% if entry.pdf %}
-          <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" target="_blank">PDF</a>
+          <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" target="_blank" rel="noopener noreferrer">PDF</a>
         {% endif %}
         {% if entry.code %}
           <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" target="_blank">Code</a>

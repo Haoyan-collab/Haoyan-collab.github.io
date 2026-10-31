@@ -58,7 +58,7 @@ cv:
       - name: "D-GEM: Sparsely Supervised Surgical Video Segmentation"
         publisher: MICCAI 2026
         releaseDate: 2026
-        url: https://doi.org/10.1007/978-3-032-38233-7_48
+        url: https://papers.miccai.org/miccai-2026/paper/5645_paper.pdf
 
     Projects:
       - name: U-KAST

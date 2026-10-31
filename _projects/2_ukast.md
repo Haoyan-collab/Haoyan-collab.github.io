@@ -11,4 +11,4 @@ For U-KAST, we explored replacing the standard MLP blocks in a Swin Transformer 
 
 I contributed through partial implementation, literature and ablation work, and the manuscript. The model uses 1.4386 GFLOPs and 7.2M parameters while performing strongly across four 2D and 3D medical-imaging benchmarks, including settings with only 10% to 25% of the training data.
 
-[Read on arXiv](https://arxiv.org/abs/2511.04084) · [Download the paper]({{ '/assets/pdf/UKAST.pdf' | relative_url }})
+[PDF](https://arxiv.org/pdf/2511.04084)
