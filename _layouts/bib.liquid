@@ -17,7 +17,9 @@
       <!-- Highlight your name automatically -->
       <div class="bib-author">
         {% for author in entry.author_array %}
-          {% unless forloop.first %}{% if forloop.last %} and {% else %}, {% endif %}{% endunless %}
+          {% unless forloop.first -%}
+            {%- if forloop.last %} and {% else %}, {% endif -%}
+          {%- endunless %}
           {% assign author_name = author.first | append: ' ' | append: author.last %}
           {% if author.first == 'Haoyan' and author.last == 'Shi' %}
             <strong>{{ author_name }}</strong>
@@ -26,10 +28,15 @@
           {% endif %}
         {% endfor %}
       </div>
-      <div class="bib-venue"><em>{{ entry.booktitle }}</em>, {{ entry.year }}</div>
+      <div class="bib-venue">
+        <em>{{ entry.booktitle }}</em>, {{ entry.year }}
+      </div>
 
       <!-- Action Buttons -->
       <div class="bib-links">
+        {% if entry.doi %}
+          <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" target="_blank" rel="noopener noreferrer">Paper (DOI)</a>
+        {% endif %}
         {% if entry.abstract %}
           <details class="bib-abstract-details">
             <summary class="btn btn-sm z-depth-0">Abs</summary>
@@ -43,7 +50,6 @@
           <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" target="_blank">Code</a>
         {% endif %}
       </div>
-
     </div>
   </div>
 </div>

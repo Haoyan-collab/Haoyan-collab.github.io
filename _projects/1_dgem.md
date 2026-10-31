@@ -11,4 +11,4 @@ Accepted by MICCAI 2026, D-GEM tackles surgical video segmentation when only a s
 
 I worked on the reliability-gated dual-memory design, including the Gated Transient Memory and Evolving Anchor Memory. Under 10-frame sparse supervision, the project reached 74.2% average mIoU across three surgical-video benchmarks, outperforming SAM3 by 10.3%.
 
-[Download the camera-ready paper]({{ '/assets/pdf/MICCAI_2026_DGEM_Camera_Ready.pdf' | relative_url }})
+[Paper (DOI: 10.1007/978-3-032-38233-7_48)](https://doi.org/10.1007/978-3-032-38233-7_48) | [PDF](https://papers.miccai.org/miccai-2026/paper/5645_paper.pdf)
