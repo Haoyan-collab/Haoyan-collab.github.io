@@ -1,91 +1,111 @@
-# Agent Guidelines for al-folio (v1.x)
+# My Scholar Agent Guide
 
-**This file is the authoritative entry point for coding agents working in this repo.** Read it before making any change. It is intentionally short and tool-neutral; it links to the one place each longer-form fact lives.
+This repository is an Astro theme for academic portfolios and research blogs.
+Preserve its static-first, Markdown-first design and keep it reusable beyond the
+sample personal site.
 
-`al-folio` v1.x is a **thin Jekyll starter, not a theme**. This repo owns starter wiring, example content, docs, and cross-plugin tests. All runtime — layouts, includes, Sass, Liquid tags, filters, feature JS — lives in versioned gems published under [`al-org-dev`](https://github.com/al-org-dev).
+## Installation
 
-## Route your change
-
-Find your change on the left; edit only what is on the right.
-
-| Your change                                                                                                              | Goes in                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
-| Dependency pin, plugin activation, feature flag                                                                          | this repo: `Gemfile` **and** `_config.yml` (both — see below)                                                 |
-| Example/demo content, bibliography, data files                                                                           | this repo: `_pages`, `_posts`, `_projects`, `_news`, `_teachings`, `_books`, `_data`                          |
-| Documentation                                                                                                            | this repo: `docs/` (long-form) or this file (agent rules)                                                     |
-| Cross-plugin integration test, visual parity test                                                                        | this repo: `test/integration_*.sh`, `test/visual/`                                                            |
-| Plugin catalog metadata                                                                                                  | this repo: `_data/featured_plugins.yml`                                                                       |
-| A layout, include, or Sass partial                                                                                       | the owning gem — start with `al_folio_core`                                                                   |
-| A Liquid tag or filter, or what a tag renders                                                                            | the gem that registers it — see the [delegation table](docs/ARCHITECTURE.md#wrapper-to-tag-to-gem-delegation) |
-| Feature behavior (search, math, charts, comments, cookies, icons, CV, distill, analytics, images, newsletter, citations) | that feature's gem — see [`docs/BOUNDARIES.md`](docs/BOUNDARIES.md)                                           |
-| Component/unit test for gem-owned behavior                                                                               | the owning gem, not here                                                                                      |
-| A feature with no existing owner                                                                                         | open a plugin proposal issue first, then a standalone plugin repo                                             |
-
-[`docs/BOUNDARIES.md`](docs/BOUNDARIES.md) is the authoritative area-to-gem table. [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) explains how the pieces connect.
-
-## Stop sign
-
-**If your change would create any of these paths in this repo, it belongs in a gem instead:**
-
-```
-_layouts/   _includes/   _sass/   _scripts/   assets/tailwind/   tailwind.config.js   assets/webfonts/
-```
-
-`npm run lint:style-contract` fails CI when any of them exists here, and it also rejects `build:css` / `build:tailwind` npm scripts. Do not add a starter-local Tailwind or CSS build pipeline.
-
-This restriction applies to **this repo only**. A user's own site created from this template _may_ legally shadow gem-owned files — see [local overrides: your site vs. this repo](docs/ARCHITECTURE.md#local-overrides-your-site-vs-this-repo).
-
-## Three failures that produce no error message
-
-Read [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md#failure-modes-that-produce-no-error-message) for the full explanation. The short version:
-
-1. **Features fail silently.** A feature renders only when its gem is loaded _and_ its flag is on _and_ the page opts in. Otherwise the Liquid tag emits an empty string — no warning, no error.
-2. **`Gemfile` and `_config.yml` are two lists that must agree.** A plugin in only one of them is inert. Adding or removing a plugin means editing both. Repo dirs use hyphens (`al-folio-core`); gem/plugin ids use underscores (`al_folio_core`).
-3. **This repo's effective baseurl is `/al-folio`.** `_config.yml` already sets it, so a plain `bundle exec jekyll build` is correct — that is what `deploy.yml`, `broken-links-site.yml` and `axe.yml` run. Passing `--baseurl /al-folio` is redundant but harmless; blanking the baseurl out is what renders the site unstyled with broken links. Dev server is at `http://localhost:4000/al-folio/`.
-
-## Validated local command set
-
-Run from the repo root, in this order:
+- Read `package.json`, `astro.config.ts`, and `docs/INSTALL.md` before changing
+  dependencies, scripts, adapters, or deployment behavior.
+- Use Node.js `>=22.12.0` and pnpm because the repository has a
+  `pnpm-lock.yaml`.
+- For a new site, follow Astro's
+  [starter-template instructions](https://docs.astro.build/en/install-and-setup/#use-a-theme-or-starter-template)
+  and run:
 
 ```bash
-bundle install
-npm ci
-npm run lint:prettier
-npm run lint:style-contract
-bundle exec jekyll build --baseurl /al-folio
-bash test/integration_comments.sh
-bash test/integration_plugin_toggles.sh
-bash test/integration_distill.sh
-bash test/integration_bootstrap_compat.sh
-bash test/integration_upgrade_cli.sh
-bash test/integration_css_minify.sh
-bash test/integration_new_plugins.sh
-npx playwright install chromium webkit
-npm run test:visual
-bundle exec al-folio upgrade audit
-bundle exec al-folio upgrade overrides audit
-bundle exec al-folio upgrade report
-docker compose up -d
-curl -fsS http://127.0.0.1:8080/al-folio/ >/dev/null
-docker compose logs --tail=80
-docker compose down
+pnpm create astro@latest --template mychiffonn/astro-scholar
 ```
 
-All seven `test/integration_*.sh` scripts are gated by `unit-tests.yml`; run the ones your change touches. Docker note: v1 uses `/srv/jekyll/bin/entry_point.sh` and serves from container-local `/tmp/_site` to avoid host bind-mount write deadlocks.
+- Prefer Astro's native commands and integrations over hand-written setup
+  instructions.
+- Keep the default output static. Add a server adapter only when a requested
+  feature requires on-demand rendering.
 
-## Before you open a PR
+## Current Astro guidance
 
-- Keep starter work here; route runtime behavior to the owning plugin repo.
-- Run `npm run lint:prettier` (Prettier with `@shopify/prettier-plugin-liquid`, `printWidth: 150`). `npx prettier . --write` fixes formatting.
-- Keep docs aligned with v1 ownership, and keep each fact in one place — link rather than restate.
-- If you create or keep local overrides of plugin-owned files, run `bundle exec al-folio upgrade overrides audit` and commit `.al-folio-overrides.yml` after review.
+- Astro APIs and integrations change. Consult Astro's
+  [Build with AI guide](https://docs.astro.build/en/guides/build-with-ai/) and
+  current documentation before relying on model memory.
+- When MCP is available, connect the official Astro Docs server at
+  `https://mcp.docs.astro.build/mcp` so agents can retrieve current framework
+  documentation.
+- Before adding an integration, read Astro's
+  [integrations guide](https://docs.astro.build/en/guides/integrations/) and the
+  integration's own documentation.
+- Use `pnpm astro add <integration>` for supported integrations. The command
+  installs dependencies and updates `astro.config.ts`; some community
+  integrations still require manual configuration.
+- Do not add a framework integration or server adapter unless the requested
+  feature needs it.
 
-## Further reading
+## Customization
 
-- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — how the starter and gems fit together, silent failure modes, the v1 config contract, local overrides.
-- [`docs/BOUNDARIES.md`](docs/BOUNDARIES.md) — authoritative area-to-gem ownership table and PR triage playbook.
-- [`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md) — contributor workflow and agent tooling.
-- [`docs/README.md`](docs/README.md) — index of all user and maintainer guides.
-- `.agents/skills/al-folio-bootstrap/SKILL.md` — new-site setup workflow.
-- `.agents/skills/al-folio-v1-migration/SKILL.md` — customized-fork migration and override drift auditing.
-- `.codex/skills` and `.claude/skills` are symlinks to `.agents/skills` for agent-specific discovery.
+- Read `docs/CUSTOMIZATION.md`, `src/site.config.ts`, `src/content.config.ts`,
+  and the relevant schema before editing user-facing configuration or content.
+- Treat `src/site.config.ts`, `src/content/`, `src/assets/`, and `public/` as the
+  primary customization surfaces.
+- Preserve content collection validation and useful schema errors.
+- Reuse existing color, typography, spacing, shape, motion, card, button, and
+  disclosure primitives before introducing new styles.
+- Check both light and dark modes after visual changes.
+
+## Blog: Writing in Markdown
+
+- Blog entries live in `src/content/blog/`; a folder with `index.md` and child
+  posts creates a post/subpost series.
+- Use Markdown rather than MDX unless interactive components inside prose are
+  essential.
+- The configured Sätteri pipeline supports GFM, directives and callouts,
+  LaTeX-style math rendered by Temml, wikilinks, code highlighting, heading
+  anchors, external links, and sidenotes.
+- Keep demo content public, reusable, and free of private personal information.
+- Supply descriptive image alt text and valid author references.
+
+## Development and build
+
+- Read `DEVELOPMENT.md` and follow nearby component patterns.
+- Prefer native Astro, semantic HTML, and native CSS before adding client-side
+  JavaScript or a UI framework.
+- Keep functions and components single-purpose.
+- Preserve existing user changes in a dirty worktree and avoid unrelated
+  rewrites.
+- Do not add hardcoded secrets, debug output, commented-out code, or AI
+  attribution.
+
+## Formatting, linting, and validation
+
+- Biome is the formatter for Astro, JavaScript, TypeScript, CSS, JSON, and other
+  supported repository files.
+- oxlint is the JavaScript and TypeScript linter. It complements Biome; the
+  Biome linter is intentionally disabled.
+- `pnpm lint:styles` enforces the repository's small set of CSS architecture
+  invariants that neither formatter nor oxlint covers.
+- Format touched files, then run the narrowest relevant check. Before handoff,
+  run:
+
+```bash
+pnpm format:check
+pnpm lint
+pnpm lint:styles
+pnpm test:markdown
+pnpm astro check
+pnpm build
+```
+
+- For visual work, inspect the affected pages at desktop and mobile widths and
+  verify keyboard, hover, focus, light, and dark states as applicable.
+
+## Publishing
+
+- Read the theme checklist in `DEVELOPMENT.md` before a release or Astro theme
+  directory submission.
+- Keep `package.json`, the README version badge, screenshots, and release post
+  aligned with the release version.
+- Run the complete validation suite and inspect the production build in both
+  color modes.
+- Do not commit generated output from `dist/`, `.astro/`, `.playwright-cli/`,
+  or `output/`.
+- Use one to four 1600×900 desktop previews for the Astro theme directory; do
+  not substitute tall full-page captures.

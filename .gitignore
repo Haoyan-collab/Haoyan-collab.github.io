@@ -1,21 +1,16 @@
-_site
-.bundle
-.DS_store
-.idea
-.jekyll-cache
-.jekyll-metadata
-.ruby-version
-.sass-cache
-.tweet-cache
-.venv
-assets/libs/
-assets/rendercv/rendercv_output/*.typ
-al-folio-upgrade-report.md
+dist/
+.astro/
+.wrangler/
 node_modules/
-output/playwright/
-test-results/
-vendor
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env
+.env.production
+.DS_Store
+.idea/
 
-# Python bytecode from bin/ helper scripts
-__pycache__/
-*.pyc
+.claude/worktrees/
+.playwright-cli/
+output/

@@ -1,0 +1,16 @@
+---
+import { getLatestUpdates } from "@/lib/updates"
+import CommonLayout from "@/layouts/CommonLayout.astro"
+import UpdatesTimeline from "@/components/timeline/UpdatesTimeline.astro"
+
+const renderedUpdates = await getLatestUpdates()
+---
+
+<CommonLayout
+  title="News"
+  description="All updates, newest first."
+  prose={false}
+  breadcrumbs={[{ label: "News", icon: "timeline" }]}
+>
+  <UpdatesTimeline renderedUpdates={renderedUpdates} />
+</CommonLayout>

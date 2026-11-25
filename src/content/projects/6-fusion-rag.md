@@ -1,0 +1,16 @@
+---
+title: "Ericsson Internship: Fusion-RAG Enterprise Search Platform"
+description: Internship project on hybrid retrieval, LLM evaluation, and enterprise knowledge search.
+types:
+  - product
+skills:
+  - Python
+  - Django
+  - ChromaDB
+  - RAG
+  - LLM evaluation
+---
+
+During my AI internship at Ericsson, I built an end-to-end Fusion-RAG enterprise-search platform with Django. The system combines BM25 and ChromaDB retrieval through Reciprocal Rank Fusion, then uses HyDE-inspired query reformulation for more complex user intents.
+
+I also built an automated LLM-as-a-Judge evaluation pipeline that generates QA datasets and measures Hit Rate@5/10 and MRR. The resulting workflow improved retrieval accuracy by approximately 10% while supporting dynamic retrieval controls, real-time database synchronization, and isolated enterprise data access.

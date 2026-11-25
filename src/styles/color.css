@@ -1,0 +1,75 @@
+/* Original theme colors:
+  --background: light-dark(
+    oklch(0.9578 0.0058 264.53),
+    oklch(0.2007 0.0199 284.46)
+  );
+  --foreground: light-dark(
+    oklch(0.4363 0.0428 281.03),
+    oklch(0.8708 0.0481 273.67)
+  );
+  --primary: light-dark(oklch(0.7789 0.1553 140.9), oklch(0.7789 0.1553 140.9));
+  --primary-foreground: light-dark(oklch(0.205 0 0), oklch(0.205 0 0));
+  --muted: light-dark(oklch(0.92 0.002 264.53), oklch(0.269 0 0));
+  --muted-foreground: light-dark(oklch(0.556 0 0), oklch(0.708 0 0));
+  --accent: light-dark(oklch(0.6182 0.1121 292.61), oklch(0.797 0.1121 292.61));
+  --accent-foreground: light-dark(
+    oklch(0.9578 0.0058 264.53),
+    oklch(0.145 0 0)
+  );
+  --destructive: light-dark(oklch(0.55 0.216 19.8), oklch(0.737 0.125 11.2));
+  --border: light-dark(oklch(0.9 0 0), oklch(1 0 0 / 20%));
+  --ring: light-dark(oklch(0.708 0 0), oklch(0.556 0 0));
+*/
+
+:root {
+  /* Mono: neutral + indigo. Previous theme default is kept in the comment above
+     and as the "Original" preset in the dev color tuner. */
+  --background: light-dark(#ffffff, #0a0a0a);
+  --foreground: light-dark(#171717, #ededed);
+  --primary: light-dark(#4f46e5, #818cf8);
+  --primary-foreground: light-dark(#ffffff, #0a0a0a);
+  --muted: light-dark(#f4f4f5, #18181b);
+  --muted-foreground: light-dark(#71717a, #a1a1aa);
+  --accent: light-dark(#4f46e5, #a5b4fc);
+  --accent-foreground: light-dark(#ffffff, #0a0a0a);
+  --interactive-background: color-mix(in oklab, var(--accent) 18%, transparent);
+  --interactive-border: color-mix(in oklab, var(--accent) 55%, var(--border));
+  --interactive-foreground: var(--foreground);
+  --destructive: light-dark(#dc2626, #f87171);
+  --border: light-dark(#e4e4e7, #27272a);
+  --ring: light-dark(#a1a1aa, #52525b);
+
+  color-scheme: light dark;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="dark"],
+:root:has(#theme-toggle:checked) {
+  color-scheme: dark;
+}
+
+*,
+::before,
+::after,
+::backdrop,
+::file-selector-button {
+  border-color: var(--border);
+
+  &:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 0.25rem;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}

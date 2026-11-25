@@ -1,0 +1,9 @@
+[haoyan]
+id       = "haoyan"
+name     = "Haoyan (Kilian) Shi"
+bio      = "M.S. student at Carnegie Mellon University working on machine learning, computer vision, and AI systems."
+
+[haoyan.links]
+email    = "haoyans@andrew.cmu.edu"
+github   = "https://github.com/Haoyan-collab"
+linkedin = "https://www.linkedin.com/in/kilian-shi"

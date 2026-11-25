@@ -1,0 +1,47 @@
+[
+  {
+    "id": "cmu-xu-lab-2026",
+    "category": "research",
+    "title": "Research Assistant",
+    "org": "Xu Lab, Carnegie Mellon University",
+    "startDate": "2026-09",
+    "location": "Pittsburgh, PA",
+    "description": "Researching multi-agent systems, vision-language-action (VLA), and agent safety for autonomous laboratory automation. Exploring planning/execution separation with compiler-based validation and runtime enforcement."
+  },
+  {
+    "id": "cmu-ms-2026",
+    "category": "education",
+    "title": "M.S. in Mobile and IoT Engineering",
+    "org": "Carnegie Mellon University",
+    "startDate": "2026-08",
+    "endDate": "2028-05",
+    "location": "Pittsburgh, PA",
+    "description": "Focusing on Computer Systems and AI Toolchains. Dedicated to bridging system-level optimizations with AI to tackle scalable foundation model deployment and infrastructure challenges."
+  },
+  {
+    "id": "ericsson-2025",
+    "category": "industry",
+    "title": "AI Intern",
+    "org": "Ericsson (China)",
+    "startDate": "2025-09",
+    "endDate": "2025-11",
+    "description": "Architected a production-ready Fusion-RAG search platform. Optimized system latency and improved retrieval accuracy by ~10% via automated LLM-as-a-Judge evaluation pipelines."
+  },
+  {
+    "id": "notre-dame-2025",
+    "category": "research",
+    "title": "Research Intern (ISURE) & Research Collaborator",
+    "org": "University of Notre Dame",
+    "startDate": "2025-07",
+    "description": "On-site ISURE internship through Sep. 2025, followed by ongoing remote collaboration with Prof. Danny Chen on medical image and video segmentation."
+  },
+  {
+    "id": "cqu-beng-2022",
+    "category": "education",
+    "title": "B.Eng. in Computer Science and Technology",
+    "org": "Chongqing University",
+    "startDate": "2022-09",
+    "endDate": "2026-06",
+    "description": "Built a solid foundation in CS systems and algorithms. Independently engineered an intelligent diagnostic web application achieving 110 FPS real-time inference with optimized vision models."
+  }
+]

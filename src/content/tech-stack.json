@@ -1,0 +1,33 @@
+{
+  "description": "Frameworks, models, and tools from my research and engineering work.",
+  "groups": [
+    {
+      "name": "Languages",
+      "icon": "mingcute:code-line",
+      "items": ["Python"]
+    },
+    {
+      "name": "Deep Learning & Vision",
+      "icon": "mingcute:ai-line",
+      "items": [
+        "PyTorch",
+        "DINOv3",
+        "SAM2 / SAM3",
+        "Swin Transformer",
+        "YOLOv8",
+        "KAN",
+        "Implicit neural representations"
+      ]
+    },
+    {
+      "name": "LLM & Retrieval",
+      "icon": "mingcute:server-line",
+      "items": ["RAG", "BM25", "ChromaDB", "HyDE", "LLM-as-a-Judge"]
+    },
+    {
+      "name": "Web & Deployment",
+      "icon": "mingcute:layout-line",
+      "items": ["Django"]
+    }
+  ]
+}
