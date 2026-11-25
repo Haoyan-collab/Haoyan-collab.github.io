@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://haoyan-collab.github.io/sitemap.xml
+Sitemap: https://haoyan-collab.github.io/sitemap-index.xml

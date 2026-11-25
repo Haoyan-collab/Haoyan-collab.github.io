@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">HS monogram</title>
+  <rect width="512" height="512" rx="112" fill="#8878c3"/>
+  <text x="256" y="330" text-anchor="middle" font-family="DejaVu Sans, Arial, Helvetica, sans-serif" font-weight="700" font-size="230" fill="#ffffff">HS</text>
+</svg>

@@ -1,1 +1,0 @@
-(()=>{const t=document.documentElement;t.dataset.theme="dark",t.dataset.themeSetting="dark";try{localStorage.setItem("theme","dark")}catch(t){}})();

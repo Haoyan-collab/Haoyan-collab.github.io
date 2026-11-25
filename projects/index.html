@@ -1,536 +1,126 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> experience | Haoyan(Kilian) Shi </title> <meta name="author" content="Haoyan Shi"> <meta name="description" content="Research projects and industry experience in computer vision, foundation models, and applied AI systems."> <meta name="keywords" content="machine learning, medical image segmentation, surgical video segmentation, computer vision, foundation models, RAG"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
-  :root {
-    --max-content-width: 930px;
-  }
-</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://haoyan-collab.github.io/projects/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
-    initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Haoyan(Kilian) Shi </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">experience <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">experience</h1> <p class="post-description">Research projects and industry experience in computer vision, foundation models, and applied AI systems.</p> </header> <article> <script src="/assets/js/force-dark-theme.js"></script> <script src="/assets/js/matrix-rain.js"></script> <div class="projects"> <section class="project-group" id="research"> <h2 class="category">research</h2> <div class="project-summary-grid"> <article class="project-summary"> <p class="project-summary-index">01</p> <h3>D-GEM: Sparsely Supervised Surgical Video Segmentation</h3> <p class="project-summary-description">Decoupled dual-memory adaptation for surgical video segmentation with sparse supervision.</p> <details class="project-details"> <summary class="project-notes-link">What I worked on <span aria-hidden="true">+</span></summary> <div class="project-detail-content"> <p>Accepted by MICCAI 2026, D-GEM tackles surgical video segmentation when only a small number of frames are annotated. The idea was to separate the memory mechanism from the encoder, so the method could adapt across architectures while using DINOv3 representations.</p> <p>I worked on the reliability-gated dual-memory design, including the Gated Transient Memory and Evolving Anchor Memory. Under 10-frame sparse supervision, the project reached 74.2% average mIoU across three surgical-video benchmarks, outperforming SAM3 by 10.3%.</p> <p><a href="https://papers.miccai.org/miccai-2026/paper/5645_paper.pdf" rel="external nofollow noopener" target="_blank">PDF</a></p> </div> </details> </article> <article class="project-summary"> <p class="project-summary-index">02</p> <h3>U-KAST: Kolmogorov-Arnold Swin Transformer</h3> <p class="project-summary-description">A compact and data-efficient architecture for medical image segmentation.</p> <details class="project-details"> <summary class="project-notes-link">What I worked on <span aria-hidden="true">+</span></summary> <div class="project-detail-content"> <p>For U-KAST, we explored replacing the standard MLP blocks in a Swin Transformer encoder with Group Rational KANs: a more expressive feed-forward pathway designed to remain practical. Safe Pade Activation Units and channel group-sharing keep the computational and memory cost of spline-based KANs under control.</p> <p>I contributed through partial implementation, literature and ablation work, and the manuscript. The model uses 1.4386 GFLOPs and 7.2M parameters while performing strongly across four 2D and 3D medical-imaging benchmarks, including settings with only 10% to 25% of the training data.</p> <p><a href="https://arxiv.org/pdf/2511.04084" rel="external nofollow noopener" target="_blank">PDF</a></p> </div> </details> </article> <article class="project-summary"> <p class="project-summary-index">03</p> <h3>SIGN: Sperm Head Morphology Classification</h3> <p class="project-summary-description">Vision foundation models and implicit shape priors for clinical morphology classification.</p> <details class="project-details"> <summary class="project-notes-link">What I worked on <span aria-hidden="true">+</span></summary> <div class="project-detail-content"> <p>SIGN is an ongoing project on sperm-head morphology classification. I am combining SAM3, frozen DINOv3 and ResNet50 features with an INR-guided shape representation, so the model can use both visual appearance and shape information. A SIREN-based DeepSDF auto-decoder compresses 2D masks into 256-dimensional latent codes, which are injected into backbone features through FiLM.</p> <p>The framework achieved 69.1 F1 on SCIAN-PA and 98.7 F1 on HuSHeM, outperforming the SHMC-Net baseline on both clinical benchmarks.</p> <p>The project is ongoing, with a planned submission to MIDL 2027.</p> </div> </details> </article> <article class="project-summary"> <p class="project-summary-index">04</p> <h3>Undergraduate Thesis: Two-Stage Dental Lesion Recognition</h3> <p class="project-summary-description">Undergraduate thesis on real-time dental lesion recognition with segmentation-guided classification.</p> <details class="project-details"> <summary class="project-notes-link">What I worked on <span aria-hidden="true">+</span></summary> <div class="project-detail-content"> <p>For my undergraduate thesis, I built a decoupled two-stage diagnostic pipeline. YOLOv8-Seg first extracts fine-grained tooth masks and positional priors to reduce cross-tooth noise. I then enhanced a Swin Transformer with a Panoramic Context Module and Mask-Guided FiLM to restore global anatomical topology.</p> <p>Rank-MIL pooling and Asymmetric Loss help capture micro-lesion features and address long-tail disease distributions. The project achieved 0.8613 F1 and 0.8610 AUC; the classifier ran at 110 FPS in batch-size-one inference on an RTX A4000. I also deployed the work as a real-time web application.</p> </div> </details> </article> <article class="project-summary"> <p class="project-summary-index">05</p> <h3>Mitigating SAM2 Degradation in Multi-Frame Prompting</h3> <p class="project-summary-description">Semantic frame clustering for more stable video mask propagation.</p> <details class="project-details"> <summary class="project-notes-link">What I worked on <span aria-hidden="true">+</span></summary> <div class="project-detail-content"> <p>I started this study by investigating why SAM2 degrades under multi-frame prompting. After tracing the issue to error accumulation from strict chronological propagation, I explored a non-sequential strategy: group visually similar frames, then route propagation by semantic similarity rather than time order.</p> <p>The work examined ControlNet-inspired dynamic gating and clustering-based propagation as possible ways to reduce temporal drift on long-horizon sequences.</p> </div> </details> </article> </div> </section> <section class="project-group" id="systems"> <h2 class="category">systems</h2> <div class="project-summary-grid"> <article class="project-summary"> <p class="project-summary-index">01</p> <h3>Ericsson Internship: Fusion-RAG Enterprise Search Platform</h3> <p class="project-summary-description">Internship project on hybrid retrieval, LLM evaluation, and enterprise knowledge search.</p> <details class="project-details"> <summary class="project-notes-link">What I worked on <span aria-hidden="true">+</span></summary> <div class="project-detail-content"> <p>During my AI internship at Ericsson, I built an end-to-end Fusion-RAG enterprise-search platform with Django. The system combines BM25 and ChromaDB retrieval through Reciprocal Rank Fusion, then uses HyDE-inspired query reformulation for more complex user intents.</p> <p>I also built an automated LLM-as-a-Judge evaluation pipeline that generates QA datasets and measures Hit Rate@5/10 and MRR. The resulting workflow improved retrieval accuracy by approximately 10% while supporting dynamic retrieval controls, real-time database synchronization, and isolated enterprise data access.</p> </div> </details> </article> </div> </section> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Haoyan Shi. Built with <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> and hosted on <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
-  window.alFolio = {
-    compatBootstrap: false
-  };
-</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
-    addBackToTop();
-  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
-// get the ninja-keys element
-const ninja = document.querySelector('ninja-keys');
+<!DOCTYPE html><html lang="en-US" dir="ltr" data-astro-cid-ju4pidww> <head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><meta name="generator" content="Astro v7.2.4"><title>Projects - Haoyan (Kilian) Shi - Machine Learning | Compu...</title><meta name="description" content="A collection of projects I've worked on, ranging from academic research to personal explorations. If you think it would be useful or interesting to collaborate on a project, please contact me to discuss."><link rel="canonical" href="https://haoyan-collab.github.io/"><meta name="robots" content="index, follow"><meta property="og:type" content="website"><meta property="og:site_name" content="Haoyan (Kilian) Shi"><meta property="og:title" content="Projects - Haoyan (Kilian) Shi - Machine Learning | Compu..."><meta property="og:description" content="A collection of projects I've worked on, ranging from academic research to personal explorations. If you think it would be useful or interesting to collaborate on a project, please contact me to discuss."><meta property="og:image" content="https://haoyan-collab.github.io/img/social-preview.jpg"><meta property="og:image:alt" content="Projects"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://haoyan-collab.github.io/"><meta property="og:locale" content="en-US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Projects"><meta name="twitter:description" content="A collection of projects I've worked on, ranging from academic research to personal explorations. If you think it would be useful or interesting to collaborate on a project, please contact me to discuss."><meta name="twitter:image" content="https://haoyan-collab.github.io/img/social-preview.jpg"><meta name="twitter:image:alt" content="Projects"><meta name="theme-color" content="#15151f" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)"><meta name="color-scheme" content="light dark"><meta name="HandheldFriendly" content="True"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Haoyan (Kilian) Shi"><meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="shortcut icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Haoyan (Kilian) Shi" href="https://haoyan-collab.github.iorss.xml"><meta name="astro-view-transitions-enabled" content="true"> <meta name="astro-view-transitions-fallback" content="animate"> <script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.BBK8auCl.js"></script><script>(function(){const siteLocale = "en-US";
 
-// add the home and posts menu items
-ninja.data = [{
-    id: "nav-about",
-    title: "about",
-    section: "Navigation",
-    handler: () => {
-      window.location.href = "/";
-    },
-  },{id: "nav-experience",
-          title: "experience",
-          description: "Research projects and industry experience in computer vision, foundation models, and applied AI systems.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/projects/";
-          },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "Curriculum vitae of Haoyan (Kilian) Shi.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
-        },{id: "post-a-post-with-marimo-snippets",
-        
-          title: "a post with marimo snippets",
-        
-        description: "running Python in the browser with marimo",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/marimo/";
-          
-        },
-      },{id: "post-a-post-with-plotly-js",
-        
-          title: "a post with plotly.js",
-        
-        description: "this is what included plotly.js code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/plotly/";
-          
-        },
-      },{id: "post-a-post-with-image-galleries",
-        
-          title: "a post with image galleries",
-        
-        description: "this is what included image galleries could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/photo-gallery/";
-          
-        },
-      },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
-        
-          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
-          
-        },
-      },{id: "post-a-post-with-tabs",
-        
-          title: "a post with tabs",
-        
-        description: "this is what included tabs in a post could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/tabs/";
-          
-        },
-      },{id: "post-a-post-with-typograms",
-        
-          title: "a post with typograms",
-        
-        description: "this is what included typograms code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/typograms/";
-          
-        },
-      },{id: "post-a-post-that-can-be-cited",
-        
-          title: "a post that can be cited",
-        
-        description: "this is what a post that can be cited looks like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/post-citation/";
-          
-        },
-      },{id: "post-a-post-with-pseudo-code",
-        
-          title: "a post with pseudo code",
-        
-        description: "this is what included pseudo code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/pseudocode/";
-          
-        },
-      },{id: "post-a-post-with-code-diff",
-        
-          title: "a post with code diff",
-        
-        description: "this is how you can display code diffs",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/code-diff/";
-          
-        },
-      },{id: "post-a-post-with-advanced-image-components",
-        
-          title: "a post with advanced image components",
-        
-        description: "this is what advanced image components could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/advanced-images/";
-          
-        },
-      },{id: "post-a-post-with-vega-lite",
-        
-          title: "a post with vega lite",
-        
-        description: "this is what included vega lite code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/vega-lite/";
-          
-        },
-      },{id: "post-a-post-with-geojson",
-        
-          title: "a post with geojson",
-        
-        description: "this is what included geojson code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/geojson-map/";
-          
-        },
-      },{id: "post-a-post-with-echarts",
-        
-          title: "a post with echarts",
-        
-        description: "this is what included echarts code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/echarts/";
-          
-        },
-      },{id: "post-a-post-with-chart-js",
-        
-          title: "a post with chart.js",
-        
-        description: "this is what included chart.js code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2024/chartjs/";
-          
-        },
-      },{id: "post-a-post-with-tikzjax",
-        
-          title: "a post with TikZJax",
-        
-        description: "this is what included TikZ code could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/tikzjax/";
-          
-        },
-      },{id: "post-a-post-with-bibliography",
-        
-          title: "a post with bibliography",
-        
-        description: "an example of a blog post with bibliography",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/post-bibliography/";
-          
-        },
-      },{id: "post-a-post-with-jupyter-notebook",
-        
-          title: "a post with jupyter notebook",
-        
-        description: "an example of a blog post with jupyter notebook",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/jupyter-notebook/";
-          
-        },
-      },{id: "post-a-post-with-custom-blockquotes",
-        
-          title: "a post with custom blockquotes",
-        
-        description: "an example of a blog post with custom blockquotes",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/custom-blockquotes/";
-          
-        },
-      },{id: "post-a-post-with-table-of-contents-on-a-sidebar",
-        
-          title: "a post with table of contents on a sidebar",
-        
-        description: "an example of a blog post with table of contents on a sidebar",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/sidebar-table-of-contents/";
-          
-        },
-      },{id: "post-a-post-with-audios",
-        
-          title: "a post with audios",
-        
-        description: "this is what included audios could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/audios/";
-          
-        },
-      },{id: "post-a-post-with-videos",
-        
-          title: "a post with videos",
-        
-        description: "this is what included videos could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/videos/";
-          
-        },
-      },{id: "post-displaying-beautiful-interactive-tables",
-        
-          title: "displaying beautiful interactive tables",
-        
-        description: "an example of how to use interactive tables in al-folio",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/tables/";
-          
-        },
-      },{id: "post-a-post-with-table-of-contents",
-        
-          title: "a post with table of contents",
-        
-        description: "an example of a blog post with table of contents",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2023/table-of-contents/";
-          
-        },
-      },{id: "post-a-post-with-giscus-comments",
-        
-          title: "a post with giscus comments",
-        
-        description: "an example of a blog post with giscus comments",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2022/giscus-comments/";
-          
-        },
-      },{id: "post-یک-نوشتهٔ-راست-چین",
-        
-          title: "یک نوشتهٔ راست‌چین",
-        
-        description: "نمونه‌ای از پشتیبانی زبان‌های راست‌چین",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2022/rtl/";
-          
-        },
-      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
-        
-          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
-          
-        },
-      },{id: "post-a-post-with-redirect",
-        
-          title: "a post with redirect",
-        
-        description: "you can also redirect to assets like pdf",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/assets/pdf/example_pdf.pdf";
-          
-        },
-      },{id: "post-a-post-with-diagrams",
-        
-          title: "a post with diagrams",
-        
-        description: "an example of a blog post with diagrams",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2021/diagrams/";
-          
-        },
-      },{id: "post-a-distill-style-blog-post",
-        
-          title: "a distill-style blog post",
-        
-        description: "an example of a distill-style blog post and main elements",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2021/distill/";
-          
-        },
-      },{id: "post-a-post-with-twitter",
-        
-          title: "a post with twitter",
-        
-        description: "an example of a blog post with twitter",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2020/twitter/";
-          
-        },
-      },{id: "post-a-post-with-disqus-comments",
-        
-          title: "a post with disqus comments",
-        
-        description: "an example of a blog post with disqus comments",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2015/disqus-comments/";
-          
-        },
-      },{id: "post-a-post-with-math",
-        
-          title: "a post with math",
-        
-        description: "an example of a blog post with some math",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2015/math/";
-          
-        },
-      },{id: "post-a-post-with-code",
-        
-          title: "a post with code",
-        
-        description: "an example of a blog post with some code",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2015/code/";
-          
-        },
-      },{id: "post-a-post-with-images",
-        
-          title: "a post with images",
-        
-        description: "this is what included images could look like",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2015/images/";
-          
-        },
-      },{id: "post-a-post-with-formatting-and-links",
-        
-          title: "a post with formatting and links",
-        
-        description: "march & april, looking forward to summer",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2015/formatting-and-links/";
-          
-        },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! <img class="emoji" title=":sparkles:" alt=":sparkles:" src="https://github.githubassets.com/images/icons/emoji/unicode/2728.png" height="20" width="20"> <img class="emoji" title=":smile:" alt=":smile:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png" height="20" width="20">',
-          description: "",
-          section: "News",},{id: "projects-d-gem-sparsely-supervised-surgical-video-segmentation",
-          title: 'D-GEM: Sparsely Supervised Surgical Video Segmentation',
-          description: "Decoupled dual-memory adaptation for surgical video segmentation with sparse supervision.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_dgem/";
-            },},{id: "projects-u-kast-kolmogorov-arnold-swin-transformer",
-          title: 'U-KAST: Kolmogorov-Arnold Swin Transformer',
-          description: "A compact and data-efficient architecture for medical image segmentation.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_ukast/";
-            },},{id: "projects-sign-sperm-head-morphology-classification",
-          title: 'SIGN: Sperm Head Morphology Classification',
-          description: "Vision foundation models and implicit shape priors for clinical morphology classification.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_sign/";
-            },},{id: "projects-undergraduate-thesis-two-stage-dental-lesion-recognition",
-          title: 'Undergraduate Thesis: Two-Stage Dental Lesion Recognition',
-          description: "Undergraduate thesis on real-time dental lesion recognition with segmentation-guided classification.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_dental/";
-            },},{id: "projects-mitigating-sam2-degradation-in-multi-frame-prompting",
-          title: 'Mitigating SAM2 Degradation in Multi-Frame Prompting',
-          description: "Semantic frame clustering for more stable video mask propagation.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/5_sam2/";
-            },},{id: "projects-ericsson-internship-fusion-rag-enterprise-search-platform",
-          title: 'Ericsson Internship: Fusion-RAG Enterprise Search Platform',
-          description: "Internship project on hybrid retrieval, LLM evaluation, and enterprise knowledge search.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/6_fusion_rag/";
-            },},{id: "teachings-data-science-fundamentals",
-          title: 'Data Science Fundamentals',
-          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
-          section: "Teachings",handler: () => {
-              window.location.href = "/teachings/data-science-fundamentals/";
-            },},{id: "teachings-introduction-to-machine-learning",
-          title: 'Introduction to Machine Learning',
-          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
-          section: "Teachings",handler: () => {
-              window.location.href = "/teachings/introduction-to-machine-learning/";
-            },},{
-        id: 'social-cv',
-        title: 'CV',
-        section: 'Socials',
-        handler: () => {
-          window.open("/assets/pdf/Resume_Kilian.pdf", "_blank");
-        },
-      },{
-        id: 'social-email',
-        title: 'email',
-        section: 'Socials',
-        handler: () => {
-          window.open("mailto:%68%61%6F%79%61%6E%73@%61%6E%64%72%65%77.%63%6D%75.%65%64%75", "_blank");
-        },
-      },{
-        id: 'social-github',
-        title: 'GitHub',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://github.com/Haoyan-collab", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
-        },
-      },{
-      id: 'light-theme',
-      title: 'Change theme to light',
-      description: 'Change the theme of the site to Light',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("light");
-      },
-    },
-    {
-      id: 'dark-theme',
-      title: 'Change theme to dark',
-      description: 'Change the theme of the site to Dark',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("dark");
-      },
-    },
-    {
-      id: 'system-theme',
-      title: 'Use system default theme',
-      description: 'Change the theme of the site to System Default',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("system");
-      },
-    },];
+    window.__SITE_LOCALE__ = siteLocale
 
-</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
+    function loadZoomAssets() {
+      if (!document.querySelector("link[data-medium-zoom-styles]")) {
+        const styles = document.createElement("link")
+        styles.rel = "stylesheet"
+        styles.href = "/styles/zoom.css"
+        styles.dataset.mediumZoomStyles = "true"
+        document.head.append(styles)
+      }
+
+      if (window.mediumZoom) return Promise.resolve()
+      if (window.__mediumZoomPromise) return window.__mediumZoomPromise
+
+      /* A rejected promise left in place would be awaited by every later
+         attempt, so one offline moment would disable zoom for the rest of the
+         session even after the network recovers. Clear it, and drop the dead
+         script tag, so the next navigation can retry. */
+      window.__mediumZoomPromise = new Promise((resolve, reject) => {
+        const script = document.createElement("script")
+        script.src =
+          "https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"
+        script.async = true
+        script.addEventListener("load", resolve, { once: true })
+        script.addEventListener(
+          "error",
+          () => {
+            script.remove()
+            reject(new Error("medium-zoom failed to load"))
+          },
+          { once: true },
+        )
+        document.head.append(script)
+      }).catch((error) => {
+        window.__mediumZoomPromise = null
+        throw error
+      })
+
+      return window.__mediumZoomPromise
+    }
+
+    /* Kept identical to the cursor rule in /styles/zoom.css. Card.astro sets
+       data-clickable whenever it renders its .card-overlay link, and that
+       overlay takes the click, so images beneath one can never be zoomed. */
+    const ZOOMABLE_IMAGES = "main img:not(a img):not([data-clickable] img)"
+
+    async function initializeImageZoom() {
+      const images = document.querySelectorAll(ZOOMABLE_IMAGES)
+      if (!images.length) return
+
+      try {
+        await loadZoomAssets()
+        window.__mediumZoomInstance?.detach()
+        window.__mediumZoomInstance = window.mediumZoom(images, {
+          margin: 24,
+          scrollOffset: 40,
+        })
+      } catch {
+        // Images remain fully usable if the optional enhancement cannot load.
+      }
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initializeImageZoom, {
+        once: true,
+      })
+    } else {
+      initializeImageZoom()
+    }
+    document.addEventListener("astro:after-swap", initializeImageZoom)
+  })();</script>  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Projects - Haoyan (Kilian) Shi - Machine Learning | Compu...","description":"A collection of projects I've worked on, ranging from academic research to personal explorations. If you think it would be useful or interesting to collaborate on a project, please contact me to discuss.","url":"https://haoyan-collab.github.io/","image":"https://haoyan-collab.github.io/img/social-preview.jpg","author":{"@type":"Person","name":"Haoyan (Kilian) Shi","email":"haoyans@andrew.cmu.edu"},"publisher":{"@type":"Person","name":"Haoyan (Kilian) Shi","logo":{"@type":"ImageObject","url":"https://haoyan-collab.github.io/web-app-manifest-512x512.png"}}}</script><link rel="stylesheet" href="/_astro/Layout.BU348wNA.css"><style>.copy-markdown-button{align-items:center;gap:var(--space-2xs);padding:var(--space-2xs) var(--space-xs);border-radius:var(--radius-md);font-size:var(--step--1);font-weight:var(--font-weight-medium);cursor:pointer;user-select:none;transition:background-color var(--motion-duration) var(--motion-ease), color var(--motion-duration-fast) var(--motion-ease);display:inline-flex}.copy-markdown-button:hover{background:var(--accent);color:var(--accent-foreground)}.copy-markdown-button:active{background:color-mix(in oklab, var(--accent) 80%, transparent)}
+.page-heading[data-astro-cid-dmey6y7i]{margin-block:var(--space-s);& h1{font-size:var(--step-2);line-height:calc(var(--leading-offset) + 1em);font-weight:var(--font-weight-medium);margin-block-end:var(--space-2xs)}}.page-description[data-astro-cid-dmey6y7i],.page-modified{color:var(--muted-foreground)}.page-modified{font-size:var(--step--1)}.common-copy-markdown{margin-block:var(--space-s);justify-content:flex-end;display:flex}
+[data-astro-cid-znqycrl3][data-taxonomy-chip]{border-radius:var(--radius-md);inline-size:fit-content;max-inline-size:100%;color:var(--muted-foreground);font-size:var(--step--1);font-weight:var(--font-weight-normal);white-space:nowrap;background:0 0;border:0;justify-content:center;align-items:center;padding:0;line-height:1.2;text-decoration:none;display:inline-flex}[data-astro-cid-znqycrl3][data-taxonomy-surface]{border:1px solid var(--border);border-radius:var(--radius-md);transition:background-color var(--motion-duration) var(--motion-ease), border-color var(--motion-duration) var(--motion-ease), color var(--motion-duration-fast) var(--motion-ease);background:0 0;justify-content:center;align-items:center;gap:.25rem;padding:.125rem .5rem;display:inline-flex}:is(a,button)[data-astro-cid-znqycrl3][data-taxonomy-chip]{min-block-size:var(--control-size-compact);cursor:pointer;touch-action:manipulation;user-select:none;transition:scale var(--motion-duration-fast) var(--motion-ease)}:is(a,button)[data-astro-cid-znqycrl3][data-taxonomy-chip]:hover [data-astro-cid-znqycrl3][data-taxonomy-surface]{border-color:var(--accent);color:var(--accent)}:is(a,button)[data-astro-cid-znqycrl3][data-taxonomy-chip][data-tone=destructive]:hover [data-astro-cid-znqycrl3][data-taxonomy-surface]{border-color:var(--destructive);color:var(--destructive)}:is(a,button)[data-astro-cid-znqycrl3][data-taxonomy-chip]:focus-visible{outline:none}:is(a,button)[data-astro-cid-znqycrl3][data-taxonomy-chip]:focus-visible [data-astro-cid-znqycrl3][data-taxonomy-surface]{outline:2px solid var(--ring);outline-offset:.25rem}:is(a,button)[data-astro-cid-znqycrl3][data-taxonomy-chip]:active{scale:.96}button[data-astro-cid-znqycrl3][data-taxonomy-chip][aria-pressed=true] [data-astro-cid-znqycrl3][data-taxonomy-surface]{border-color:var(--primary);background:var(--primary);color:var(--primary-foreground)}[data-astro-cid-znqycrl3][data-taxonomy-prefix]{color:inherit;font-weight:inherit}[data-astro-cid-znqycrl3][data-taxonomy-count]{font-variant-numeric:tabular-nums;opacity:.7;margin-inline-start:.125rem}@media (pointer:coarse),(pointer:none),(any-pointer:coarse){:is(a,button)[data-astro-cid-znqycrl3][data-taxonomy-chip] [data-astro-cid-znqycrl3][data-taxonomy-surface]{min-block-size:var(--control-size-compact)}}@media (prefers-reduced-motion:reduce){:is(a,button)[data-astro-cid-znqycrl3][data-taxonomy-chip],[data-astro-cid-znqycrl3][data-taxonomy-surface]{transition-duration:.01ms}}
+.copy-button[data-astro-cid-xsbwfxlh]{align-items:center;gap:var(--space-3xs);color:inherit;cursor:pointer;background:0 0;border:0;display:inline-flex}.copy-button[data-astro-cid-xsbwfxlh][data-copy-variant=accent-outline]{min-block-size:var(--control-size);padding:var(--space-2xs) var(--space-xs);border:.5px solid var(--border);border-radius:var(--radius-md);color:var(--foreground);font-size:var(--step--1);font-weight:var(--font-weight-medium);touch-action:manipulation;user-select:none;transition:background-color var(--motion-duration) var(--motion-ease), border-color var(--motion-duration) var(--motion-ease), color var(--motion-duration-fast) var(--motion-ease), transform var(--motion-duration-fast) var(--motion-ease);background:0 0;line-height:1.2}.copy-button[data-astro-cid-xsbwfxlh][data-copy-variant=accent-outline]:active{transform:scale(.96)}@media (hover:hover) and (pointer:fine){.copy-button[data-astro-cid-xsbwfxlh][data-copy-variant=accent-outline]:hover{border-color:var(--accent);background:var(--accent);color:var(--accent-foreground)}}
+</style><link rel="stylesheet" href="/_astro/CardTitle.y5kk0ovd.css"><style>base-tooltip[data-astro-cid-vbiij4pc]{display:contents}.tooltip-positioner[data-astro-cid-vbiij4pc]{z-index:60;inline-size:max-content;max-inline-size:min(22rem,100vw - 1rem);padding:var(--space-2xs) var(--space-xs);border-radius:var(--radius-md);visibility:hidden;opacity:0;background:var(--foreground);color:var(--background);font-size:var(--step--2);line-height:var(--line-height-normal);pointer-events:none;text-wrap:pretty;transition:opacity var(--motion-duration-fast) var(--motion-ease), translate var(--motion-duration-fast) var(--motion-ease), visibility 0s linear var(--motion-duration-fast);position:fixed;inset:0 auto auto 0;box-shadow:0 .5rem 1.25rem -.5rem oklch(0% 0 0/.28)}.tooltip-positioner[data-astro-cid-vbiij4pc][data-open]{visibility:visible;opacity:1;transition-delay:0s;translate:0}.tooltip-positioner[data-astro-cid-vbiij4pc][data-side=top]{translate:0 .125rem}.tooltip-positioner[data-astro-cid-vbiij4pc][data-side=right]{translate:-.125rem}.tooltip-positioner[data-astro-cid-vbiij4pc][data-side=bottom]{translate:0 -.125rem}.tooltip-positioner[data-astro-cid-vbiij4pc][data-side=left]{translate:.125rem}.tooltip-arrow[data-astro-cid-vbiij4pc]{background:inherit;border-radius:.0625rem;block-size:.5rem;inline-size:.5rem;position:absolute;rotate:45deg}.tooltip-positioner[data-astro-cid-vbiij4pc][data-side=top] .tooltip-arrow[data-astro-cid-vbiij4pc],.tooltip-positioner[data-astro-cid-vbiij4pc][data-side=bottom] .tooltip-arrow[data-astro-cid-vbiij4pc]{inset-inline-start:var(--tooltip-arrow-offset,50%);translate:-50%}.tooltip-positioner[data-astro-cid-vbiij4pc][data-side=top] .tooltip-arrow[data-astro-cid-vbiij4pc]{inset-block-end:-.25rem}.tooltip-positioner[data-astro-cid-vbiij4pc][data-side=bottom] .tooltip-arrow[data-astro-cid-vbiij4pc]{inset-block-start:-.25rem}.tooltip-positioner[data-astro-cid-vbiij4pc][data-side=left] .tooltip-arrow[data-astro-cid-vbiij4pc],.tooltip-positioner[data-astro-cid-vbiij4pc][data-side=right] .tooltip-arrow[data-astro-cid-vbiij4pc]{inset-block-start:var(--tooltip-arrow-offset,50%);translate:0 -50%}.tooltip-positioner[data-astro-cid-vbiij4pc][data-side=left] .tooltip-arrow[data-astro-cid-vbiij4pc]{inset-inline-end:-.25rem}.tooltip-positioner[data-astro-cid-vbiij4pc][data-side=right] .tooltip-arrow[data-astro-cid-vbiij4pc]{inset-inline-start:-.25rem}@media (prefers-reduced-motion:reduce){.tooltip-positioner[data-astro-cid-vbiij4pc]{transition-duration:.01ms}}
+.chip-filter-bar{align-items:center;gap:var(--space-2xs);padding-block:var(--space-3xs);flex-wrap:wrap;display:flex}.chip-filter-bar:empty{display:none}.chip-active-filter{align-items:center;display:inline-flex}@media (width>=64rem){.chip-filter-bar{row-gap:0}}
+</style><link rel="stylesheet" href="/_astro/index.DgvuH6GS.css"><style>.section-block[data-astro-cid-75vcsabj]{gap:var(--space-s);flex-direction:column;margin-block-start:var(--space-l);display:flex}.section-block[data-astro-cid-75vcsabj][data-spacing=none]{margin-block-start:0}section-heading[data-astro-cid-75vcsabj]{align-items:baseline;gap:var(--space-s);min-width:0;display:flex}h2[data-astro-cid-75vcsabj]{width:fit-content;color:var(--foreground);font-size:var(--step-2);line-height:1.333;font-weight:var(--font-weight-medium);margin:0;padding-block-end:.125rem;position:relative}h2[data-astro-cid-75vcsabj]:before{content:"";background:var(--celestial-star);clip-path:polygon(50% 0,58% 40%,100% 50%,58% 60%,50% 100%,42% 60%,0 50%,42% 40%);opacity:.62;block-size:.7rem;inline-size:.7rem;transition:opacity var(--motion-duration) var(--motion-ease), transform var(--motion-duration) var(--motion-ease);position:absolute;inset-block-start:.15em;inset-inline-end:-1.05rem;transform:scale(.82)}h2[data-astro-cid-75vcsabj]:after{content:"";background:var(--primary);opacity:.7;border-radius:1px;block-size:2px;inline-size:2rem;transition:inline-size .3s ease-in-out;position:absolute;inset-block-end:0;inset-inline-start:0}.section-block[data-astro-cid-75vcsabj]:hover h2[data-astro-cid-75vcsabj]:after,section-heading[data-astro-cid-75vcsabj]:focus-within h2[data-astro-cid-75vcsabj]:after{inline-size:3rem}.section-block[data-astro-cid-75vcsabj]:hover h2[data-astro-cid-75vcsabj]:before,section-heading[data-astro-cid-75vcsabj]:focus-within h2[data-astro-cid-75vcsabj]:before{opacity:1;transform:scale(1)rotate(10deg)}.section-more[data-astro-cid-75vcsabj]{color:var(--muted-foreground);font-size:var(--step-0);flex-shrink:0;line-height:1.5}@media (width<40rem){.section-block[data-astro-cid-75vcsabj]{margin-block-start:var(--space-m)}section-heading[data-astro-cid-75vcsabj]{gap:var(--space-xs)}.section-more[data-astro-cid-75vcsabj]{font-size:var(--step--1)}}@media (prefers-reduced-motion:reduce){h2[data-astro-cid-75vcsabj]:before,h2[data-astro-cid-75vcsabj]:after{transition-duration:.01ms}}
+[data-astro-cid-a2gikkvr][data-badge]{border-radius:var(--radius-md);inline-size:fit-content;max-inline-size:100%;font-size:var(--step--1);line-height:1.25;font-weight:var(--font-weight-medium);white-space:nowrap;text-overflow:ellipsis;transition:background-color var(--motion-duration) var(--motion-ease), border-color var(--motion-duration) var(--motion-ease), color var(--motion-duration-fast) var(--motion-ease);border:1px solid #0000;flex-shrink:0;justify-content:center;align-items:center;gap:.25rem;padding:.125rem .5rem;text-decoration:none;display:inline-flex;overflow:hidden}[data-astro-cid-a2gikkvr][data-badge] svg{flex-shrink:0;block-size:1em;inline-size:1em}[data-astro-cid-a2gikkvr][data-badge][data-variant=default]{background:var(--primary);color:var(--primary-foreground)}[data-astro-cid-a2gikkvr][data-badge][data-variant=accent]{background:var(--accent);color:var(--accent-foreground)}[data-astro-cid-a2gikkvr][data-badge][data-variant=destructive],[data-astro-cid-a2gikkvr][data-badge][data-variant=danger]{border-color:color-mix(in oklab, var(--destructive) 45%, transparent);color:var(--destructive)}[data-astro-cid-a2gikkvr][data-badge][data-variant=outline],[data-astro-cid-a2gikkvr][data-badge][data-variant=tag]{border-color:var(--border);color:var(--muted-foreground)}[data-astro-cid-a2gikkvr][data-badge][data-variant=muted]{background:color-mix(in oklab, var(--muted) 70%, transparent);color:var(--muted-foreground)}[data-astro-cid-a2gikkvr][data-badge][data-variant=success]{border-color:color-mix(in oklab, var(--primary) 45%, transparent);color:var(--primary)}[data-astro-cid-a2gikkvr][data-badge][data-variant=warning]{color:color-mix(in oklab, orange 80%, var(--foreground));border-color:oklab(79.2689% .0566112 .161385/.45)}[data-astro-cid-a2gikkvr][data-badge][data-variant=info]{border-color:color-mix(in oklab, var(--accent) 45%, transparent);color:var(--accent)}a[data-astro-cid-a2gikkvr][data-badge]:hover{border-color:var(--accent);color:var(--accent)}
+</style><script type="module" src="/_astro/page.CKU1N9Na.js"></script></head> <body data-astro-cid-ju4pidww> <div id="main-header" class="menu-bar" data-astro-cid-r64ez5xz>  <header class="site-header" data-astro-cid-isef26zo> <div class="site-brand" data-astro-cid-isef26zo> <a href="/" data-link class="site-home" data-button="true" data-variant="ghost" data-size="square" title="Haoyan (Kilian) Shi" aria-label="Haoyan (Kilian) Shi" data-astro-transition-persist="astro-cykaeyu2-1" data-astro-cid-isef26zo="true" data-astro-cid-ackudsgp="true" data-astro-cid-6tsfnanm>   <svg viewBox="0 0 24 24" data-astro-cid-isef26zo="true" width="1.5rem" height="1.5rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M10.8 2.65a2 2 0 0 1 2.4 0l7 5.25a2 2 0 0 1 .8 1.6V19a2 2 0 0 1-2 2h-4.9a1.1 1.1 0 0 1-1.1-1.1V14a1 1 0 1 0-2 0v5.9A1.1 1.1 0 0 1 9.9 21H5a2 2 0 0 1-2-2V9.5a2 2 0 0 1 .8-1.6zm1.2 1.6L5 9.5V19h4v-5a3 3 0 1 1 6 0v5h4V9.5z"/></g> </svg>   </a> <ul class="profile-links profile-links-icon header-links" data-astro-cid-jwtnixb5> <li data-astro-cid-jwtnixb5> <a href="mailto:haoyans@andrew.cmu.edu" target="_blank" rel="noopener noreferrer nofollow" data-link data-external="true" class="profile-link-icon" data-button="true" data-variant="ghost" data-size="square" title="Email" data-astro-cid-jwtnixb5="true" data-astro-cid-ackudsgp="true" data-astro-cid-6tsfnanm>   <svg viewBox="0 0 24 24" data-astro-cid-jwtnixb5="true" width="1.5rem" height="1.5rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M20 4a2 2 0 0 1 1.995 1.85L22 6v12a2 2 0 0 1-1.85 1.995L20 20H4a2 2 0 0 1-1.995-1.85L2 18V6a2 2 0 0 1 1.85-1.995L4 4zm0 3.414l-6.94 6.94a1.5 1.5 0 0 1-2.12 0L4 7.414V18h16zM18.586 6H5.414L12 12.586z"/></g> </svg> <span class="sr-only" data-astro-cid-jwtnixb5>Email</span>   </a> </li><li data-astro-cid-jwtnixb5> <a href="https://github.com/Haoyan-collab" target="_blank" rel="noopener noreferrer me" data-link data-external="true" class="profile-link-icon" data-button="true" data-variant="ghost" data-size="square" title="GitHub" data-astro-cid-jwtnixb5="true" data-astro-cid-ackudsgp="true" data-astro-cid-6tsfnanm>   <svg viewBox="0 0 24 24" data-astro-cid-jwtnixb5="true" width="1.5rem" height="1.5rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M6.315 6.176c-.25-.638-.24-1.367-.129-2.034a6.8 6.8 0 0 1 2.12 1.07c.28.214.647.283.989.18A9.3 9.3 0 0 1 12 5c.961 0 1.874.14 2.703.391c.342.104.709.034.988-.18a6.8 6.8 0 0 1 2.119-1.07c.111.667.12 1.396-.128 2.033c-.15.384-.075.826.208 1.14C18.614 8.117 19 9.04 19 10c0 2.114-1.97 4.187-5.134 4.818c-.792.158-1.101 1.155-.495 1.726c.389.366.629.882.629 1.456v3a1 1 0 0 0 2 0v-3c0-.57-.12-1.112-.334-1.603C18.683 15.35 21 12.993 21 10c0-1.347-.484-2.585-1.287-3.622c.21-.82.191-1.646.111-2.28c-.071-.568-.17-1.312-.57-1.756c-.595-.659-1.58-.271-2.28-.032a9 9 0 0 0-2.125 1.045A11.4 11.4 0 0 0 12 3c-.994 0-1.953.125-2.851.356a9 9 0 0 0-2.125-1.045c-.7-.24-1.686-.628-2.281.031c-.408.452-.493 1.137-.566 1.719l-.005.038c-.08.635-.098 1.462.112 2.283C3.484 7.418 3 8.654 3 10c0 2.992 2.317 5.35 5.334 6.397A4 4 0 0 0 8 17.98l-.168.034c-.717.099-1.176.01-1.488-.122c-.76-.322-1.152-1.133-1.63-1.753c-.298-.385-.732-.866-1.398-1.088a1 1 0 0 0-.632 1.898c.558.186.944 1.142 1.298 1.566c.373.448.869.916 1.58 1.218c.682.29 1.483.393 2.438.276V21a1 1 0 0 0 2 0v-3c0-.574.24-1.09.629-1.456c.607-.572.297-1.568-.495-1.726C6.969 14.187 5 12.114 5 10c0-.958.385-1.881 1.108-2.684c.283-.314.357-.756.207-1.14"/></g> </svg> <span class="sr-only" data-astro-cid-jwtnixb5>GitHub</span>   </a> </li><li data-astro-cid-jwtnixb5> <a href="https://www.linkedin.com/in/kilian-shi" target="_blank" rel="noopener noreferrer me" data-link data-external="true" class="profile-link-icon" data-button="true" data-variant="ghost" data-size="square" title="LinkedIn" data-astro-cid-jwtnixb5="true" data-astro-cid-ackudsgp="true" data-astro-cid-6tsfnanm>   <svg viewBox="0 0 24 24" data-astro-cid-jwtnixb5="true" width="1.5rem" height="1.5rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M18 3a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3zm0 2H6a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1M8 10a1 1 0 0 1 .993.883L9 11v5a1 1 0 0 1-1.993.117L7 16v-5a1 1 0 0 1 1-1m3-1a1 1 0 0 1 .984.821a6 6 0 0 1 .623-.313c.667-.285 1.666-.442 2.568-.159c.473.15.948.43 1.3.907c.315.425.485.942.519 1.523L17 12v4a1 1 0 0 1-1.993.117L15 16v-4c0-.33-.08-.484-.132-.555a.55.55 0 0 0-.293-.188c-.348-.11-.849-.052-1.182.09c-.5.214-.958.55-1.27.861L12 12.34V16a1 1 0 0 1-1.993.117L10 16v-6a1 1 0 0 1 1-1M8 7a1 1 0 1 1 0 2a1 1 0 0 1 0-2"/></g> </svg> <span class="sr-only" data-astro-cid-jwtnixb5>LinkedIn</span>   </a> </li><li data-astro-cid-jwtnixb5> <a href="/doc/Resume_Kilian.pdf" data-link class="profile-link-icon" data-button="true" data-variant="ghost" data-size="square" title="CV" data-astro-cid-jwtnixb5="true" data-astro-cid-ackudsgp="true" data-astro-cid-6tsfnanm>   <svg viewBox="0 0 512 512" data-astro-cid-jwtnixb5="true" width="1.5rem" height="1.5rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <path fill="currentColor" d="M249.18 328.324c-9.788 15.384-19.179 30.434-40.222 45.055c-11.256 7.89-37.164 23.306-73.99 23.306C64.709 396.685 8 345.605 8 255.801c0-78.486 53.345-140.486 128.466-140.486c30.434 0 57.474 10.521 77.387 26.304c18.414 14.65 27.038 29.304 34.563 42.456l-52.58 26.273c-3.762-8.626-8.29-17.649-19.913-27.406c-12.784-10.155-25.54-13.152-36.46-13.152c-42.821 0-65.364 39.825-65.364 84.145c0 58.238 29.7 87.143 65.364 87.143c34.563 0 48.48-24.042 57.474-39.426zm184.194-204.75H504l-92.037 265.22h-67.597l-90.904-265.22h70.625l54.843 188.6z"/> </svg> <span class="sr-only" data-astro-cid-jwtnixb5>CV</span>   </a> </li> </ul> </div> <div class="site-actions" data-astro-cid-isef26zo> <nav class="desktop-nav" aria-label="Site navigation" data-astro-cid-isef26zo> <a href="/projects" data-link class="nav-link nav-active" data-astro-cid-isef26zo="true" data-astro-cid-6tsfnanm> Projects </a><a href="/publications" data-link class="nav-link" data-astro-cid-isef26zo="true" data-astro-cid-6tsfnanm> Publications </a> </nav> <div data-dropdown-root data-state="closed" style="--dropdown-offset:4px"> <button type="button" data-button data-variant="ghost" data-size="square" class="mobile-menu-trigger" slot="trigger" title="Menu" data-dropdown-trigger="true" data-astro-cid-imidouvt="true" data-astro-cid-ackudsgp>  <svg viewBox="0 0 24 24" data-astro-cid-imidouvt="true" width="1.5rem" height="1.5rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M20 18a1 1 0 0 1 .117 1.993L20 20H4a1 1 0 0 1-.117-1.993L4 18zm0-7a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0-7a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2z"/></g> </svg> <span class="sr-only" data-astro-cid-imidouvt>Toggle menu</span>  </button> <div id="dropdown-ckut2qi" data-dropdown-content data-align="end" class="mobile-menu-content" role="menu" aria-orientation="vertical" tabindex="-1" data-astro-cid-imidouvt="true">   <div data-astro-cid-imidouvt> <a href="/projects" data-dropdown-item data-nav-link="/projects" data-astro-cid-imidouvt> Projects </a><a href="/publications" data-dropdown-item data-nav-link="/publications" data-astro-cid-imidouvt> Publications </a> <hr class="mobile-menu-separator" data-astro-cid-imidouvt> <button data-dropdown-item data-theme-value="light" data-astro-cid-hcna3qhe> <svg viewBox="0 0 24 24" data-astro-cid-hcna3qhe="true" width="1.25rem" height="1.25rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 19a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1m6.364-2.05l.707.707a1 1 0 0 1-1.414 1.414l-.707-.707a1 1 0 0 1 1.414-1.414m-12.728 0a1 1 0 0 1 1.497 1.32l-.083.094l-.707.707a1 1 0 0 1-1.497-1.32l.083-.094zM12 6a6 6 0 1 1 0 12a6 6 0 0 1 0-12m0 2a4 4 0 1 0 0 8a4 4 0 0 0 0-8m-8 3a1 1 0 0 1 .117 1.993L4 13H3a1 1 0 0 1-.117-1.993L3 11zm17 0a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2zM4.929 4.929a1 1 0 0 1 1.32-.083l.094.083l.707.707a1 1 0 0 1-1.32 1.497l-.094-.083l-.707-.707a1 1 0 0 1 0-1.414m14.142 0a1 1 0 0 1 0 1.414l-.707.707a1 1 0 1 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0M12 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1"/></g> </svg>
+Light
+</button> <button data-dropdown-item data-theme-value="dark" data-astro-cid-hcna3qhe> <svg viewBox="0 0 24 24" data-astro-cid-hcna3qhe="true" width="1.25rem" height="1.25rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M13.574 3.137a1.01 1.01 0 0 0-1.097 1.409a6 6 0 0 1-7.931 7.931a1.01 1.01 0 0 0-1.409 1.097A9 9 0 0 0 21 12c0-4.434-3.206-8.118-7.426-8.863m1.307 2.481A7.002 7.002 0 0 1 12 19a7 7 0 0 1-6.382-4.12a8 8 0 0 0 9.263-9.263Z"/></g> </svg>
+Dark
+</button> <button data-dropdown-item data-theme-value="auto" data-astro-cid-hcna3qhe> <svg viewBox="0 0 24 24" data-astro-cid-hcna3qhe="true" width="1.25rem" height="1.25rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" fill-rule="nonzero" d="M19 3a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-4v1h1a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h1v-1H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm-6 15h-2v1h2zm6-13H5v11h14z"/></g> </svg>
+Auto
+</button> <script type="module">function e(e){return e===`auto`?window.matchMedia(`(prefers-color-scheme: dark)`).matches?`dark`:`light`:e}function t(e){let t=document.documentElement;t.classList.add(`theme-no-transition`),t.setAttribute(`data-theme`,e),t.classList.remove(`scheme-dark`,`scheme-light`),t.classList.add(e===`dark`?`scheme-dark`:`scheme-light`),window.getComputedStyle(t).getPropertyValue(`opacity`),requestAnimationFrame(()=>{t.classList.remove(`theme-no-transition`)})}function n(){let e=localStorage.getItem(`theme`)??`auto`;document.querySelectorAll(`[data-theme-value]`).forEach(t=>{t.toggleAttribute(`data-active`,t.dataset.themeValue===e)})}document.addEventListener(`click`,r=>{let i=r.target.closest(`[data-theme-value]`);if(!i)return;let a=i.dataset.themeValue;localStorage.setItem(`theme`,a),t(e(a)),n()}),window.matchMedia(`(prefers-color-scheme: dark)`).addEventListener(`change`,()=>{(localStorage.getItem(`theme`)??`auto`)===`auto`&&t(e(`auto`))}),n(),document.addEventListener(`astro:after-swap`,()=>{t(e(localStorage.getItem(`theme`)??`auto`)),n()});</script> </div>  </div> </div> <script type="module">var e=class{container;trigger;content;isOpen=!1;constructor(e){this.container=e,this.trigger=e.querySelector(`[data-dropdown-trigger]`),this.content=e.querySelector(`[data-dropdown-content]`),!(!this.trigger||!this.content)&&(this.trigger.addEventListener(`click`,this.handleTriggerClick),this.content.addEventListener(`click`,this.handleContentClick),document.addEventListener(`click`,this.handleOutsideClick),this.container.addEventListener(`dropdown-close`,()=>this.close()),this.container.addEventListener(`dropdown-open`,()=>this.open()),e.dataset.state===`open`&&this.open())}handleTriggerClick=e=>{e.preventDefault(),e.stopPropagation(),this.isOpen?this.close():this.open()};handleContentClick=e=>{e.target.closest(`[data-dropdown-item]`)&&this.close()};handleOutsideClick=e=>{this.container.contains(e.target)||this.close()};open(){this.content&&(this.isOpen=!0,this.container.dataset.state=`open`,this.position())}close(){this.isOpen=!1,this.container.dataset.state=`closed`}position(){if(!this.trigger||!this.content)return;let e=this.trigger.getBoundingClientRect(),t=this.content.getBoundingClientRect(),n=0;this.content.dataset.align===`end`&&(n=e.width-t.width),this.content.dataset.align===`center`&&(n=(e.width-t.width)/2),n=Math.min(n,window.innerWidth-e.left-t.width-10),n=Math.max(n,10-e.left),this.content.style.left=`${n}px`}};function t(){document.querySelectorAll(`[data-dropdown-root]`).forEach(t=>{t.dataset.dropdownInitialized||(new e(t),t.dataset.dropdownInitialized=`true`)})}document.readyState===`loading`?document.addEventListener(`DOMContentLoaded`,t):t(),document.addEventListener(`astro:after-swap`,t);</script> <script type="module">var e=null,t=``;function n(){let n=window.location.pathname;n!==t&&(t=n,e??=document.querySelectorAll(`[data-nav-link]`),requestAnimationFrame(()=>{e?.forEach(e=>{let n=e.getAttribute(`data-nav-link`);if(!n)return;let r=t===n||n!==`/`&&t.startsWith(n);e.toggleAttribute(`aria-current`,r)})}))}function r(){let e=document.querySelector(`[data-dropdown-root]`);e?.getAttribute(`data-state`)===`open`&&e.dispatchEvent(new CustomEvent(`dropdown-close`))}document.readyState===`loading`?document.addEventListener(`DOMContentLoaded`,n,{once:!0}):n(),document.addEventListener(`astro:after-swap`,()=>{e=null,t=``,n()}),document.addEventListener(`astro:before-swap`,r);</script> <div class="desktop-theme" data-astro-cid-isef26zo> <div data-dropdown-root data-state="closed" style="--dropdown-offset:4px"> <button type="button" data-button data-variant="ghost" data-size="square" slot="trigger" title="Theme" data-dropdown-trigger="true" data-astro-cid-6lp36acm="true" data-astro-cid-ackudsgp>  <div class="theme-icon-stack" aria-hidden="true" data-astro-cid-6lp36acm> <svg viewBox="0 0 24 24" data-astro-cid-6lp36acm="true" width="1.5rem" height="1.5rem" class="theme-icon-light" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 19a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1m6.364-2.05l.707.707a1 1 0 0 1-1.414 1.414l-.707-.707a1 1 0 0 1 1.414-1.414m-12.728 0a1 1 0 0 1 1.497 1.32l-.083.094l-.707.707a1 1 0 0 1-1.497-1.32l.083-.094zM12 6a6 6 0 1 1 0 12a6 6 0 0 1 0-12m0 2a4 4 0 1 0 0 8a4 4 0 0 0 0-8m-8 3a1 1 0 0 1 .117 1.993L4 13H3a1 1 0 0 1-.117-1.993L3 11zm17 0a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2zM4.929 4.929a1 1 0 0 1 1.32-.083l.094.083l.707.707a1 1 0 0 1-1.32 1.497l-.094-.083l-.707-.707a1 1 0 0 1 0-1.414m14.142 0a1 1 0 0 1 0 1.414l-.707.707a1 1 0 1 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0M12 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1"/></g> </svg> <svg viewBox="0 0 24 24" data-astro-cid-6lp36acm="true" width="1.5rem" height="1.5rem" class="theme-icon-dark" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M13.574 3.137a1.01 1.01 0 0 0-1.097 1.409a6 6 0 0 1-7.931 7.931a1.01 1.01 0 0 0-1.409 1.097A9 9 0 0 0 21 12c0-4.434-3.206-8.118-7.426-8.863m1.307 2.481A7.002 7.002 0 0 1 12 19a7 7 0 0 1-6.382-4.12a8 8 0 0 0 9.263-9.263Z"/></g> </svg> </div> <span class="sr-only" data-astro-cid-6lp36acm>Toggle theme</span>  </button> <div id="theme-dropdown" data-dropdown-content data-align="end" role="menu" aria-orientation="vertical" tabindex="-1" data-astro-cid-6lp36acm="true">   <div class="theme-menu" data-astro-cid-6lp36acm> <button data-dropdown-item data-theme-value="light" data-astro-cid-hcna3qhe> <svg viewBox="0 0 24 24" data-astro-cid-hcna3qhe="true" width="1.25rem" height="1.25rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 19a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1m6.364-2.05l.707.707a1 1 0 0 1-1.414 1.414l-.707-.707a1 1 0 0 1 1.414-1.414m-12.728 0a1 1 0 0 1 1.497 1.32l-.083.094l-.707.707a1 1 0 0 1-1.497-1.32l.083-.094zM12 6a6 6 0 1 1 0 12a6 6 0 0 1 0-12m0 2a4 4 0 1 0 0 8a4 4 0 0 0 0-8m-8 3a1 1 0 0 1 .117 1.993L4 13H3a1 1 0 0 1-.117-1.993L3 11zm17 0a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2zM4.929 4.929a1 1 0 0 1 1.32-.083l.094.083l.707.707a1 1 0 0 1-1.32 1.497l-.094-.083l-.707-.707a1 1 0 0 1 0-1.414m14.142 0a1 1 0 0 1 0 1.414l-.707.707a1 1 0 1 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0M12 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1"/></g> </svg>
+Light
+</button> <button data-dropdown-item data-theme-value="dark" data-astro-cid-hcna3qhe> <svg viewBox="0 0 24 24" data-astro-cid-hcna3qhe="true" width="1.25rem" height="1.25rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M13.574 3.137a1.01 1.01 0 0 0-1.097 1.409a6 6 0 0 1-7.931 7.931a1.01 1.01 0 0 0-1.409 1.097A9 9 0 0 0 21 12c0-4.434-3.206-8.118-7.426-8.863m1.307 2.481A7.002 7.002 0 0 1 12 19a7 7 0 0 1-6.382-4.12a8 8 0 0 0 9.263-9.263Z"/></g> </svg>
+Dark
+</button> <button data-dropdown-item data-theme-value="auto" data-astro-cid-hcna3qhe> <svg viewBox="0 0 24 24" data-astro-cid-hcna3qhe="true" width="1.25rem" height="1.25rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" fill-rule="nonzero" d="M19 3a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-4v1h1a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h1v-1H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm-6 15h-2v1h2zm6-13H5v11h14z"/></g> </svg>
+Auto
+</button>  </div>  </div> </div>  <script data-astro-rerun>
+  ;(() => {
+    const stored = localStorage?.getItem("theme") ?? "auto"
+    const preference = ["light", "dark", "auto"].includes(stored)
+      ? stored
+      : "auto"
+    const resolved =
+      preference === "auto"
+        ? window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light"
+        : preference
+
+    document.documentElement.setAttribute("data-theme", resolved)
+    document.documentElement.classList.add(
+      resolved === "dark" ? "scheme-dark" : "scheme-light",
+    )
+    localStorage.setItem("theme", preference)
+  })()
+</script> </div> </div> </header>  <div class="menu-bar-progress" aria-hidden="true" data-astro-cid-r64ez5xz> <span data-scroll-progress data-astro-cid-r64ez5xz></span> </div> </div> <script type="module">var e=null,t=0;function n(){if(t=0,!e)return;let{scrollHeight:n,clientHeight:r}=document.documentElement,i=n-r,a=i>0?Math.min(1,Math.max(0,scrollY/i)):0;e.style.scale=`${a} 1`}function r(){t||=requestAnimationFrame(n)}function i(){e=document.querySelector(`[data-scroll-progress]`),n()}addEventListener(`scroll`,r,{passive:!0}),addEventListener(`resize`,r,{passive:!0}),document.addEventListener(`astro:page-load`,i),document.addEventListener(`astro:after-swap`,i),i();</script> <div class="breadcrumb-region" data-astro-cid-ju4pidww> <nav aria-label="Breadcrumb navigation" data-astro-cid-rccrbjaa> <ol class="breadcrumb-list" data-astro-cid-rccrbjaa> <li class="breadcrumb-item" data-astro-cid-rccrbjaa> <a href="/" class="breadcrumb-link stretched-link" aria-label="Navigate to home page" title="Go to home page" data-astro-cid-rccrbjaa> <svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-rccrbjaa="true" width="1.25rem" height="1.25rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M10.8 2.65a2 2 0 0 1 2.4 0l7 5.25a2 2 0 0 1 .8 1.6V19a2 2 0 0 1-2 2h-4.9a1.1 1.1 0 0 1-1.1-1.1V14a1 1 0 1 0-2 0v5.9A1.1 1.1 0 0 1 9.9 21H5a2 2 0 0 1-2-2V9.5a2 2 0 0 1 .8-1.6zm1.2 1.6L5 9.5V19h4v-5a3 3 0 1 1 6 0v5h4V9.5z"/></g> </svg> <span class="sr-only" data-astro-cid-rccrbjaa>Home</span> </a> </li>  <li role="presentation" aria-hidden="true" data-astro-cid-rccrbjaa> <svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-rccrbjaa="true" width="1em" height="1em" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M15.707 11.293a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 1 1-1.414-1.414l4.95-4.95l-4.95-4.95a1 1 0 0 1 1.414-1.414z"/></g> </svg> </li> <li class="breadcrumb-item" data-astro-cid-rccrbjaa> <span aria-current="page" class="breadcrumb-current" data-astro-cid-rccrbjaa> <svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-rccrbjaa="true" width="1.25rem" height="1.25rem" class="breadcrumb-icon" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M9.52 3a2 2 0 0 1 1.442.614l.12.137L12.48 5.5H19a2 2 0 0 1 1.995 1.85L21 7.5v1.53a2 2 0 0 1 1.61 2.398l-.038.147l-2.4 8a2 2 0 0 1-1.752 1.418l-.164.007H4a2 2 0 0 1-1.995-1.85L2 19V5a2 2 0 0 1 1.85-1.995L4 3zm11.136 8H6.744l-2.4 8h13.912zM9.519 5H4v8.187l.828-2.762A2 2 0 0 1 6.744 9H19V7.5h-6.52a2 2 0 0 1-1.561-.75z"/></g> </svg> <span class="breadcrumb-label" data-astro-cid-rccrbjaa>Projects</span> </span> </li>  </ol> </nav> </div> <main data-astro-cid-ju4pidww>  <section class="page-heading" data-astro-cid-dmey6y7i> <h1 data-astro-cid-dmey6y7i>Projects</h1> <p class="page-description" data-astro-cid-dmey6y7i>A collection of projects I&#39;ve worked on, ranging from academic research to personal explorations. If you think it would be useful or interesting to collaborate on a project, please contact me to discuss.</p>  </section>  <div class="projects-page" data-astro-cid-yjitjrjk> <div class="projects-list-wrapper" data-astro-cid-yjitjrjk> <div class="project-filters" role="group" aria-labelledby="project-skill-filter-label" data-astro-cid-yjitjrjk> <span class="project-filter-label" id="project-skill-filter-label" data-astro-cid-yjitjrjk>
+Skill
+</span> <div class="project-skill-controls" data-astro-cid-yjitjrjk> <div class="chip-filter-bar" data-astro-cid-yjitjrjk> <button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill PyTorch; 5 projects" data-project-skill-filter="pytorch" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>PyTorch</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(5)</span> </span> </button><button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill Medical imaging; 4 projects" data-project-skill-filter="medical-imaging" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>Medical imaging</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(4)</span> </span> </button><button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill DINOv3; 2 projects" data-project-skill-filter="dinov3" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>DINOv3</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(2)</span> </span> </button><button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill Swin Transformer; 2 projects" data-project-skill-filter="swin-transformer" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>Swin Transformer</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(2)</span> </span> </button><button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill Video segmentation; 2 projects" data-project-skill-filter="video-segmentation" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>Video segmentation</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(2)</span> </span> </button> <span class="chip-active-filter" data-active-filter hidden data-astro-cid-yjitjrjk> <button type="button" data-taxonomy-chip data-tone="destructive" aria-label="Clear project filter" data-clear-project-filters="true" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>×</span> <span data-astro-cid-znqycrl3>Clear filter</span>  </span> </button> </span> </div> <details class="project-skill-more" data-disclosure data-astro-cid-yjitjrjk> <summary data-astro-cid-yjitjrjk> <span data-skill-more-show data-astro-cid-yjitjrjk>
+Show 10 more skills </span> <span data-skill-more-hide data-astro-cid-yjitjrjk>Hide additional skills</span> <span data-disclosure-chevron data-astro-cid-yjitjrjk> <svg viewBox="0 0 24 24" data-astro-cid-yjitjrjk="true" width="1em" height="1em" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414z"/></g> </svg> </span> </summary> <div class="chip-filter-bar project-skill-more-chips" data-astro-cid-yjitjrjk> <button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill ChromaDB; 1 project" data-project-skill-filter="chromadb" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>ChromaDB</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(1)</span> </span> </button><button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill Django; 1 project" data-project-skill-filter="django" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>Django</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(1)</span> </span> </button><button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill Implicit neural representations; 1 project" data-project-skill-filter="implicit-neural-representations" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>Implicit neural representations</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(1)</span> </span> </button><button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill KAN; 1 project" data-project-skill-filter="kan" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>KAN</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(1)</span> </span> </button><button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill LLM evaluation; 1 project" data-project-skill-filter="llm-evaluation" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>LLM evaluation</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(1)</span> </span> </button><button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill Python; 1 project" data-project-skill-filter="python" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>Python</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(1)</span> </span> </button><button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill RAG; 1 project" data-project-skill-filter="rag" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>RAG</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(1)</span> </span> </button><button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill SAM2; 1 project" data-project-skill-filter="sam2" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>SAM2</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(1)</span> </span> </button><button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill SAM3; 1 project" data-project-skill-filter="sam3" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>SAM3</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(1)</span> </span> </button><button type="button" data-taxonomy-chip data-tone="accent" aria-label="Filter projects by skill YOLOv8; 1 project" data-project-skill-filter="yolov8" aria-pressed="false" data-astro-cid-yjitjrjk="true" data-astro-cid-znqycrl3> <span data-taxonomy-surface data-astro-cid-znqycrl3> <span data-taxonomy-prefix aria-hidden="true" data-astro-cid-znqycrl3>#</span> <span data-astro-cid-znqycrl3>YOLOv8</span> <span data-taxonomy-count aria-hidden="true" data-astro-cid-znqycrl3>(1)</span> </span> </button> </div> </details> </div> <span class="sr-only" aria-live="polite" aria-atomic="true" data-project-filter-status data-astro-cid-yjitjrjk></span> </div> <div class="project-filter-empty" data-project-filter-empty hidden data-astro-cid-yjitjrjk> <h2 data-astro-cid-yjitjrjk>No matching projects</h2> <p data-astro-cid-yjitjrjk>Try clearing the skill filter.</p> </div> <div class="project-list" data-astro-cid-yjitjrjk> <article class="project-row is-highlighted" data-project-skills="pytorch,dinov3,video-segmentation,medical-imaging" data-astro-cid-kap6dy2w> <div class="project-row-head" data-astro-cid-kap6dy2w> <h3 class="project-row-title" data-astro-cid-kap6dy2w> <span class="sr-only" data-astro-cid-kap6dy2w>Featured project: </span> <a href="/projects/1-dgem" data-link data-underline="true" data-astro-cid-kap6dy2w="true" data-astro-cid-6tsfnanm> D-GEM: Sparsely Supervised Surgical Video Segmentation </a> </h3> <ul class="project-row-links" data-astro-cid-kap6dy2w> <li data-astro-cid-kap6dy2w> <a href="https://papers.miccai.org/miccai-2026/paper/5645_paper.pdf" target="_blank" rel="noopener noreferrer nofollow" data-link data-external="true" class="project-row-link" data-astro-cid-kap6dy2w="true" data-astro-cid-6tsfnanm>  <svg viewBox="0 0 448 512" data-astro-cid-kap6dy2w="true" width="0.88em" height="1em" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <path fill="currentColor" d="M62.258 8.006a22.22 22.22 0 0 0-20.929 13.448c-3.404 8.169-.96 13.898 6.506 24.59c10.935 16.09 122.178 149.673 122.178 149.673l-24.619 23.038c-20.74 20.735-21.632 48.566-2.34 67.852l28.663 27.3l-79.976 98.235c-6.21 6.614-10.053 18.221-6.585 26.552a22.7 22.7 0 0 0 21.21 14.06a20.23 20.23 0 0 0 15.249-7.536l95.122-88.437L363.33 496.39a27.14 27.14 0 0 0 18.418 7.61a25.3 25.3 0 0 0 7.335-1.108a27.66 27.66 0 0 0 18.4-18.99a25.6 25.6 0 0 0-6.481-23.69L272.219 305.195l23.062-21.443c17.198-15.504 17.29-42.455.197-58.076l-25.257-24.228L357.417 98.46l.115-.133l.103-.14c7.793-10.123 11.52-17.92 7.502-27.806a36.17 36.17 0 0 0-23.647-18.37a24 24 0 0 0-3.166-.212l-.006.018a28.52 28.52 0 0 0-18.252 8.123l-.203.166l-.19.173L218.6 151.925L79.261 18.253S70.995 8.213 62.258 8.006m276.06 51.214q1.115.004 2.22.148a29.3 29.3 0 0 1 17.719 13.81c2.246 5.523 1.554 10.01-6.506 20.484L264.861 196.3l-40.882-39.22l100.68-91.304a21.77 21.77 0 0 1 13.66-6.536zM175.077 201.127L395.19 464.872c4.32 5.408 7.02 10.818 5.18 16.914a20.25 20.25 0 0 1-13.463 14.037a17.6 17.6 0 0 1-5.17.784a19.8 19.8 0 0 1-13.293-5.56l-220.15-209.694c-17.317-17.316-14.698-40.33 2.158-57.186z"/> </svg> <span data-astro-cid-kap6dy2w>Paper</span>  </a> </li> </ul> </div> <p class="project-row-description" data-astro-cid-kap6dy2w>Decoupled dual-memory adaptation for surgical video segmentation with sparse supervision.</p> <p class="project-row-skills" data-astro-cid-kap6dy2w>PyTorch · DINOv3 · Video segmentation · Medical imaging</p> </article><article class="project-row is-highlighted" data-project-skills="pytorch,swin-transformer,kan,medical-imaging" data-astro-cid-kap6dy2w> <div class="project-row-head" data-astro-cid-kap6dy2w> <h3 class="project-row-title" data-astro-cid-kap6dy2w> <span class="sr-only" data-astro-cid-kap6dy2w>Featured project: </span> <a href="/projects/2-ukast" data-link data-underline="true" data-astro-cid-kap6dy2w="true" data-astro-cid-6tsfnanm> U-KAST: Kolmogorov-Arnold Swin Transformer </a> </h3> <ul class="project-row-links" data-astro-cid-kap6dy2w> <li data-astro-cid-kap6dy2w> <a href="https://arxiv.org/pdf/2511.04084" target="_blank" rel="noopener noreferrer nofollow" data-link data-external="true" class="project-row-link" data-astro-cid-kap6dy2w="true" data-astro-cid-6tsfnanm>  <svg viewBox="0 0 448 512" data-astro-cid-kap6dy2w="true" width="0.88em" height="1em" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <path fill="currentColor" d="M62.258 8.006a22.22 22.22 0 0 0-20.929 13.448c-3.404 8.169-.96 13.898 6.506 24.59c10.935 16.09 122.178 149.673 122.178 149.673l-24.619 23.038c-20.74 20.735-21.632 48.566-2.34 67.852l28.663 27.3l-79.976 98.235c-6.21 6.614-10.053 18.221-6.585 26.552a22.7 22.7 0 0 0 21.21 14.06a20.23 20.23 0 0 0 15.249-7.536l95.122-88.437L363.33 496.39a27.14 27.14 0 0 0 18.418 7.61a25.3 25.3 0 0 0 7.335-1.108a27.66 27.66 0 0 0 18.4-18.99a25.6 25.6 0 0 0-6.481-23.69L272.219 305.195l23.062-21.443c17.198-15.504 17.29-42.455.197-58.076l-25.257-24.228L357.417 98.46l.115-.133l.103-.14c7.793-10.123 11.52-17.92 7.502-27.806a36.17 36.17 0 0 0-23.647-18.37a24 24 0 0 0-3.166-.212l-.006.018a28.52 28.52 0 0 0-18.252 8.123l-.203.166l-.19.173L218.6 151.925L79.261 18.253S70.995 8.213 62.258 8.006m276.06 51.214q1.115.004 2.22.148a29.3 29.3 0 0 1 17.719 13.81c2.246 5.523 1.554 10.01-6.506 20.484L264.861 196.3l-40.882-39.22l100.68-91.304a21.77 21.77 0 0 1 13.66-6.536zM175.077 201.127L395.19 464.872c4.32 5.408 7.02 10.818 5.18 16.914a20.25 20.25 0 0 1-13.463 14.037a17.6 17.6 0 0 1-5.17.784a19.8 19.8 0 0 1-13.293-5.56l-220.15-209.694c-17.317-17.316-14.698-40.33 2.158-57.186z"/> </svg> <span data-astro-cid-kap6dy2w>Paper</span>  </a> </li> </ul> </div> <p class="project-row-description" data-astro-cid-kap6dy2w>A compact and data-efficient architecture for medical image segmentation.</p> <p class="project-row-skills" data-astro-cid-kap6dy2w>PyTorch · Swin Transformer · KAN · Medical imaging</p> </article><article class="project-row" data-project-skills="pytorch,dinov3,sam3,implicit-neural-representations,medical-imaging" data-astro-cid-kap6dy2w> <div class="project-row-head" data-astro-cid-kap6dy2w> <h3 class="project-row-title" data-astro-cid-kap6dy2w>  <a href="/projects/3-sign" data-link data-underline="true" data-astro-cid-kap6dy2w="true" data-astro-cid-6tsfnanm> SIGN: Sperm Head Morphology Classification </a> </h3>  </div> <p class="project-row-description" data-astro-cid-kap6dy2w>Vision foundation models and implicit shape priors for clinical morphology classification.</p> <p class="project-row-skills" data-astro-cid-kap6dy2w>PyTorch · DINOv3 · SAM3 · Implicit neural representations · Medical imaging</p> </article><article class="project-row" data-project-skills="pytorch,yolov8,swin-transformer,medical-imaging" data-astro-cid-kap6dy2w> <div class="project-row-head" data-astro-cid-kap6dy2w> <h3 class="project-row-title" data-astro-cid-kap6dy2w>  <a href="/projects/4-dental" data-link data-underline="true" data-astro-cid-kap6dy2w="true" data-astro-cid-6tsfnanm> Undergraduate Thesis: Two-Stage Dental Lesion Recognition </a> </h3>  </div> <p class="project-row-description" data-astro-cid-kap6dy2w>Undergraduate thesis on real-time dental lesion recognition with segmentation-guided classification.</p> <p class="project-row-skills" data-astro-cid-kap6dy2w>PyTorch · YOLOv8 · Swin Transformer · Medical imaging</p> </article><article class="project-row" data-project-skills="pytorch,sam2,video-segmentation" data-astro-cid-kap6dy2w> <div class="project-row-head" data-astro-cid-kap6dy2w> <h3 class="project-row-title" data-astro-cid-kap6dy2w>  <a href="/projects/5-sam2" data-link data-underline="true" data-astro-cid-kap6dy2w="true" data-astro-cid-6tsfnanm> Mitigating SAM2 Degradation in Multi-Frame Prompting </a> </h3>  </div> <p class="project-row-description" data-astro-cid-kap6dy2w>Semantic frame clustering for more stable video mask propagation.</p> <p class="project-row-skills" data-astro-cid-kap6dy2w>PyTorch · SAM2 · Video segmentation</p> </article><article class="project-row" data-project-skills="python,django,chromadb,rag,llm-evaluation" data-astro-cid-kap6dy2w> <div class="project-row-head" data-astro-cid-kap6dy2w> <h3 class="project-row-title" data-astro-cid-kap6dy2w>  <a href="/projects/6-fusion-rag" data-link data-underline="true" data-astro-cid-kap6dy2w="true" data-astro-cid-6tsfnanm> Ericsson Internship: Fusion-RAG Enterprise Search Platform </a> </h3>  </div> <p class="project-row-description" data-astro-cid-kap6dy2w>Internship project on hybrid retrieval, LLM evaluation, and enterprise knowledge search.</p> <p class="project-row-skills" data-astro-cid-kap6dy2w>Python · Django · ChromaDB · RAG · LLM evaluation</p> </article> </div> </div> <section class="section-block tech-stack-section" data-spacing="default" data-astro-cid-75vcsabj> <section-heading data-astro-cid-75vcsabj="true"> <h2 id="tech stack" data-astro-cid-75vcsabj>Tech Stack</h2>  </section-heading>  <div class="tech-stack" data-astro-cid-c7f2umel> <p class="tech-stack-description" data-astro-cid-c7f2umel>Frameworks, models, and tools from my research and engineering work.</p> <div data-slot="card-group" data-columns="2" data-breakpoint="medium" data-orientation="stacked" data-separated="true" class="tech-stack-grid" data-astro-cid-c7f2umel="true"> <section data-slot="card" data-orientation="stacked" data-padding="compact" class="tech-stack-group" data-astro-cid-c7f2umel="true"> <header data-slot="card-header" class="tech-stack-heading" data-astro-cid-c7f2umel="true">  <svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-c7f2umel="true" width="1em" height="1em" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none"><path d="M0 0h24v24H0z"/><path fill="currentColor" d="M14.486 3.143a1 1 0 0 1 .692 1.233l-4.43 15.788a1 1 0 0 1-1.926-.54l4.43-15.788a1 1 0 0 1 1.234-.693M7.207 7.05a1 1 0 0 1 0 1.414L3.672 12l3.535 3.535a1 1 0 1 1-1.414 1.415L1.55 12.707a1 1 0 0 1 0-1.414L5.793 7.05a1 1 0 0 1 1.414 0m9.586 1.414a1 1 0 1 1 1.414-1.414l4.243 4.243a1 1 0 0 1 0 1.414l-4.243 4.243a1 1 0 0 1-1.414-1.415L20.328 12z"/></g> </svg> <h3 data-slot="card-title" data-astro-cid-c7f2umel="true"> Languages </h3>  </header> <div data-slot="card-content" data-astro-cid-c7f2umel="true">  <ul class="tech-stack-items" aria-label="Languages technologies" data-astro-cid-c7f2umel> <li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> Python </span></li> </ul>  </div>  </section><section data-slot="card" data-orientation="stacked" data-padding="compact" class="tech-stack-group" data-astro-cid-c7f2umel="true"> <header data-slot="card-header" class="tech-stack-heading" data-astro-cid-c7f2umel="true">  <svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-c7f2umel="true" width="1em" height="1em" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M9.107 5.448c.598-1.75 3.016-1.803 3.725-.159l.06.16l.807 2.36a4 4 0 0 0 2.276 2.411l.217.081l2.36.806c1.75.598 1.803 3.016.16 3.725l-.16.06l-2.36.807a4 4 0 0 0-2.412 2.276l-.081.216l-.806 2.361c-.598 1.75-3.016 1.803-3.724.16l-.062-.16l-.806-2.36a4 4 0 0 0-2.276-2.412l-.216-.081l-2.36-.806c-1.751-.598-1.804-3.016-.16-3.724l.16-.062l2.36-.806A4 4 0 0 0 8.22 8.025l.081-.216zM11 6.094l-.806 2.36a6 6 0 0 1-3.49 3.649l-.25.091l-2.36.806l2.36.806a6 6 0 0 1 3.649 3.49l.091.25l.806 2.36l.806-2.36a6 6 0 0 1 3.49-3.649l.25-.09l2.36-.807l-2.36-.806a6 6 0 0 1-3.649-3.49l-.09-.25zM19 2a1 1 0 0 1 .898.56l.048.117l.35 1.026l1.027.35a1 1 0 0 1 .118 1.845l-.118.048l-1.026.35l-.35 1.027a1 1 0 0 1-1.845.117l-.048-.117l-.35-1.026l-1.027-.35a1 1 0 0 1-.118-1.845l.118-.048l1.026-.35l.35-1.027A1 1 0 0 1 19 2"/></g> </svg> <h3 data-slot="card-title" data-astro-cid-c7f2umel="true"> Deep Learning &amp; Vision </h3>  </header> <div data-slot="card-content" data-astro-cid-c7f2umel="true">  <ul class="tech-stack-items" aria-label="Deep Learning &amp; Vision technologies" data-astro-cid-c7f2umel> <li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> PyTorch </span></li><li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> DINOv3 </span></li><li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> SAM2 / SAM3 </span></li><li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> Swin Transformer </span></li><li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> YOLOv8 </span></li><li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> KAN </span></li><li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> Implicit neural representations </span></li> </ul>  </div>  </section><section data-slot="card" data-orientation="stacked" data-padding="compact" class="tech-stack-group" data-astro-cid-c7f2umel="true"> <header data-slot="card-header" class="tech-stack-heading" data-astro-cid-c7f2umel="true">  <svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-c7f2umel="true" width="1em" height="1em" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M18 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 12H6v4h12zm-5 1a1 1 0 1 1 0 2a1 1 0 0 1 0-2m3 0a1 1 0 1 1 0 2a1 1 0 0 1 0-2m2-6H6v3h12zm0-5H6v3h12z"/></g> </svg> <h3 data-slot="card-title" data-astro-cid-c7f2umel="true"> LLM &amp; Retrieval </h3>  </header> <div data-slot="card-content" data-astro-cid-c7f2umel="true">  <ul class="tech-stack-items" aria-label="LLM &amp; Retrieval technologies" data-astro-cid-c7f2umel> <li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> RAG </span></li><li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> BM25 </span></li><li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> ChromaDB </span></li><li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> HyDE </span></li><li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> LLM-as-a-Judge </span></li> </ul>  </div>  </section><section data-slot="card" data-orientation="stacked" data-padding="compact" class="tech-stack-group" data-astro-cid-c7f2umel="true"> <header data-slot="card-header" class="tech-stack-heading" data-astro-cid-c7f2umel="true">  <svg viewBox="0 0 24 24" aria-hidden="true" data-astro-cid-c7f2umel="true" width="1em" height="1em" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm16 0H5v3h14zM5 19v-9h4v9zm6 0h8v-9h-8z"/></g> </svg> <h3 data-slot="card-title" data-astro-cid-c7f2umel="true"> Web &amp; Deployment </h3>  </header> <div data-slot="card-content" data-astro-cid-c7f2umel="true">  <ul class="tech-stack-items" aria-label="Web &amp; Deployment technologies" data-astro-cid-c7f2umel> <li data-astro-cid-c7f2umel><span data-badge data-variant="muted" data-astro-cid-c7f2umel="true" data-astro-cid-a2gikkvr> Django </span></li> </ul>  </div>  </section> </div> </div>  </section>  <section class="section-block github-activity" data-spacing="default" data-astro-cid-75vcsabj> <section-heading data-astro-cid-75vcsabj="true"> <h2 id="github activity" data-astro-cid-75vcsabj>GitHub Activity</h2>  </section-heading>  <script type="module" src="/_astro/Tooltip.astro_astro_type_script_index_0_lang.D9dlLSZl.js"></script><github-activity data-username="Haoyan-collab" data-poll-ms="300000" data-state="loading" data-astro-cid-ifgzdfbq="true"> <div class="github-activity-intro" data-astro-cid-ifgzdfbq> <p data-astro-cid-ifgzdfbq>
+Recent public activity from  <a href="https://github.com/Haoyan-collab" target="_blank" rel="noopener noreferrer nofollow" data-link data-external="true" class="github-activity-link" data-astro-cid-ifgzdfbq="true" data-astro-cid-6tsfnanm> 
+@Haoyan-collab </a>
+. Hover over a day, or focus the heatmap and use the arrow keys, to inspect
+            the past year.
+</p> <span class="github-activity-status" data-activity-status aria-live="polite" data-astro-cid-ifgzdfbq>
+Syncing with GitHub…
+</span> </div> <div class="github-activity-panel" data-astro-cid-ifgzdfbq> <div class="github-activity-chart" data-astro-cid-ifgzdfbq> <div class="github-activity-weekdays" aria-hidden="true" data-astro-cid-ifgzdfbq> <span data-astro-cid-ifgzdfbq>Sun</span> <span data-astro-cid-ifgzdfbq>Mon</span> <span data-astro-cid-ifgzdfbq>Tue</span> <span data-astro-cid-ifgzdfbq>Wed</span> <span data-astro-cid-ifgzdfbq>Thu</span> <span data-astro-cid-ifgzdfbq>Fri</span> <span data-astro-cid-ifgzdfbq>Sat</span> </div> <div class="github-activity-scroll" data-astro-cid-ifgzdfbq> <div class="github-activity-grid" data-activity-grid role="grid" tabindex="0" aria-label="GitHub contributions over the past year for Haoyan-collab" aria-rowcount="7" aria-colcount="53" aria-busy="true" data-astro-cid-ifgzdfbq></div> </div> </div> <div class="github-activity-footer" data-astro-cid-ifgzdfbq> <span class="github-activity-legend" aria-label="Activity intensity legend" data-astro-cid-ifgzdfbq> <span data-astro-cid-ifgzdfbq>Less</span> <i data-level="0" aria-hidden="true" data-astro-cid-ifgzdfbq></i><i data-level="1" aria-hidden="true" data-astro-cid-ifgzdfbq></i><i data-level="2" aria-hidden="true" data-astro-cid-ifgzdfbq></i><i data-level="3" aria-hidden="true" data-astro-cid-ifgzdfbq></i><i data-level="4" aria-hidden="true" data-astro-cid-ifgzdfbq></i> <span data-astro-cid-ifgzdfbq>More</span> </span> </div> <base-tooltip data-tooltip-id="github-activity-tooltip-Haoyan-collab" data-side="top" data-align="center" data-side-offset="8" data-collision-padding="8" data-delay-duration="0" data-close-delay="0" data-manual="true" data-astro-cid-vbiij4pc="true"> <span id="github-activity-tooltip-Haoyan-collab" class="tooltip-positioner" data-tooltip-popup data-side="top" role="tooltip" aria-hidden="true" data-astro-cid-vbiij4pc> <span data-tooltip-content data-astro-cid-vbiij4pc></span> <span class="tooltip-arrow" data-tooltip-arrow aria-hidden="true" data-astro-cid-vbiij4pc></span> </span> </base-tooltip>  </div> <script type="application/json" data-contribution-days>[{"date":"2025-11-30","count":0},{"date":"2025-12-07","count":0},{"date":"2025-12-14","count":0},{"date":"2025-12-21","count":4},{"date":"2025-12-28","count":0},{"date":"2025-12-01","count":0},{"date":"2025-12-08","count":0},{"date":"2025-12-15","count":0},{"date":"2025-12-22","count":0},{"date":"2025-12-29","count":0},{"date":"2025-12-02","count":0},{"date":"2025-12-09","count":1},{"date":"2025-12-16","count":0},{"date":"2025-12-23","count":0},{"date":"2025-12-30","count":0},{"date":"2025-11-26","count":0},{"date":"2025-12-03","count":0},{"date":"2025-12-10","count":0},{"date":"2025-12-17","count":0},{"date":"2025-12-24","count":0},{"date":"2025-12-31","count":0},{"date":"2025-11-27","count":0},{"date":"2025-12-04","count":0},{"date":"2025-12-11","count":0},{"date":"2025-12-18","count":0},{"date":"2025-12-25","count":0},{"date":"2025-11-28","count":0},{"date":"2025-12-05","count":0},{"date":"2025-12-12","count":0},{"date":"2025-12-19","count":0},{"date":"2025-12-26","count":0},{"date":"2025-11-29","count":0},{"date":"2025-12-06","count":0},{"date":"2025-12-13","count":0},{"date":"2025-12-20","count":0},{"date":"2025-12-27","count":0},{"date":"2026-01-04","count":0},{"date":"2026-01-11","count":0},{"date":"2026-01-18","count":0},{"date":"2026-01-25","count":0},{"date":"2026-02-01","count":0},{"date":"2026-02-08","count":0},{"date":"2026-02-15","count":6},{"date":"2026-02-22","count":1},{"date":"2026-03-01","count":4},{"date":"2026-03-08","count":0},{"date":"2026-03-15","count":1},{"date":"2026-03-22","count":0},{"date":"2026-03-29","count":0},{"date":"2026-04-05","count":0},{"date":"2026-04-12","count":0},{"date":"2026-04-19","count":0},{"date":"2026-04-26","count":0},{"date":"2026-05-03","count":0},{"date":"2026-05-10","count":0},{"date":"2026-05-17","count":0},{"date":"2026-05-24","count":0},{"date":"2026-05-31","count":0},{"date":"2026-06-07","count":0},{"date":"2026-06-14","count":0},{"date":"2026-06-21","count":0},{"date":"2026-06-28","count":0},{"date":"2026-07-05","count":0},{"date":"2026-07-12","count":0},{"date":"2026-07-19","count":0},{"date":"2026-07-26","count":0},{"date":"2026-08-02","count":0},{"date":"2026-08-09","count":0},{"date":"2026-08-16","count":0},{"date":"2026-08-23","count":0},{"date":"2026-08-30","count":0},{"date":"2026-09-06","count":5},{"date":"2026-09-13","count":1},{"date":"2026-09-20","count":0},{"date":"2026-09-27","count":0},{"date":"2026-10-04","count":10},{"date":"2026-10-11","count":8},{"date":"2026-10-18","count":15},{"date":"2026-10-25","count":1},{"date":"2026-11-01","count":21},{"date":"2026-11-08","count":18},{"date":"2026-11-15","count":0},{"date":"2026-11-22","count":19},{"date":"2026-01-05","count":0},{"date":"2026-01-12","count":0},{"date":"2026-01-19","count":0},{"date":"2026-01-26","count":0},{"date":"2026-02-02","count":1},{"date":"2026-02-09","count":0},{"date":"2026-02-16","count":2},{"date":"2026-02-23","count":0},{"date":"2026-03-02","count":1},{"date":"2026-03-09","count":0},{"date":"2026-03-16","count":0},{"date":"2026-03-23","count":0},{"date":"2026-03-30","count":0},{"date":"2026-04-06","count":0},{"date":"2026-04-13","count":0},{"date":"2026-04-20","count":0},{"date":"2026-04-27","count":0},{"date":"2026-05-04","count":0},{"date":"2026-05-11","count":0},{"date":"2026-05-18","count":0},{"date":"2026-05-25","count":0},{"date":"2026-06-01","count":0},{"date":"2026-06-08","count":0},{"date":"2026-06-15","count":0},{"date":"2026-06-22","count":0},{"date":"2026-06-29","count":0},{"date":"2026-07-06","count":0},{"date":"2026-07-13","count":0},{"date":"2026-07-20","count":0},{"date":"2026-07-27","count":0},{"date":"2026-08-03","count":0},{"date":"2026-08-10","count":0},{"date":"2026-08-17","count":0},{"date":"2026-08-24","count":0},{"date":"2026-08-31","count":0},{"date":"2026-09-07","count":2},{"date":"2026-09-14","count":0},{"date":"2026-09-21","count":0},{"date":"2026-09-28","count":0},{"date":"2026-10-05","count":5},{"date":"2026-10-12","count":32},{"date":"2026-10-19","count":4},{"date":"2026-10-26","count":11},{"date":"2026-11-02","count":19},{"date":"2026-11-09","count":0},{"date":"2026-11-16","count":1},{"date":"2026-11-23","count":12},{"date":"2026-01-06","count":0},{"date":"2026-01-13","count":0},{"date":"2026-01-20","count":0},{"date":"2026-01-27","count":1},{"date":"2026-02-03","count":1},{"date":"2026-02-10","count":2},{"date":"2026-02-17","count":0},{"date":"2026-02-24","count":0},{"date":"2026-03-03","count":2},{"date":"2026-03-10","count":0},{"date":"2026-03-17","count":0},{"date":"2026-03-24","count":0},{"date":"2026-03-31","count":0},{"date":"2026-04-07","count":0},{"date":"2026-04-14","count":0},{"date":"2026-04-21","count":0},{"date":"2026-04-28","count":0},{"date":"2026-05-05","count":0},{"date":"2026-05-12","count":0},{"date":"2026-05-19","count":0},{"date":"2026-05-26","count":0},{"date":"2026-06-02","count":0},{"date":"2026-06-09","count":0},{"date":"2026-06-16","count":0},{"date":"2026-06-23","count":0},{"date":"2026-06-30","count":0},{"date":"2026-07-07","count":0},{"date":"2026-07-14","count":0},{"date":"2026-07-21","count":0},{"date":"2026-07-28","count":0},{"date":"2026-08-04","count":0},{"date":"2026-08-11","count":0},{"date":"2026-08-18","count":0},{"date":"2026-08-25","count":0},{"date":"2026-09-01","count":16},{"date":"2026-09-08","count":6},{"date":"2026-09-15","count":4},{"date":"2026-09-22","count":0},{"date":"2026-09-29","count":0},{"date":"2026-10-06","count":0},{"date":"2026-10-13","count":17},{"date":"2026-10-20","count":0},{"date":"2026-10-27","count":11},{"date":"2026-11-03","count":21},{"date":"2026-11-10","count":20},{"date":"2026-11-17","count":4},{"date":"2026-11-24","count":1},{"date":"2026-01-07","count":0},{"date":"2026-01-14","count":0},{"date":"2026-01-21","count":1},{"date":"2026-01-28","count":4},{"date":"2026-02-04","count":0},{"date":"2026-02-11","count":1},{"date":"2026-02-18","count":1},{"date":"2026-02-25","count":0},{"date":"2026-03-04","count":2},{"date":"2026-03-11","count":0},{"date":"2026-03-18","count":0},{"date":"2026-03-25","count":0},{"date":"2026-04-01","count":0},{"date":"2026-04-08","count":0},{"date":"2026-04-15","count":0},{"date":"2026-04-22","count":0},{"date":"2026-04-29","count":0},{"date":"2026-05-06","count":0},{"date":"2026-05-13","count":0},{"date":"2026-05-20","count":0},{"date":"2026-05-27","count":0},{"date":"2026-06-03","count":0},{"date":"2026-06-10","count":0},{"date":"2026-06-17","count":0},{"date":"2026-06-24","count":0},{"date":"2026-07-01","count":0},{"date":"2026-07-08","count":0},{"date":"2026-07-15","count":0},{"date":"2026-07-22","count":0},{"date":"2026-07-29","count":0},{"date":"2026-08-05","count":0},{"date":"2026-08-12","count":0},{"date":"2026-08-19","count":0},{"date":"2026-08-26","count":0},{"date":"2026-09-02","count":3},{"date":"2026-09-09","count":3},{"date":"2026-09-16","count":3},{"date":"2026-09-23","count":0},{"date":"2026-09-30","count":2},{"date":"2026-10-07","count":21},{"date":"2026-10-14","count":38},{"date":"2026-10-21","count":10},{"date":"2026-10-28","count":12},{"date":"2026-11-04","count":10},{"date":"2026-11-11","count":1},{"date":"2026-11-18","count":1},{"date":"2026-11-25","count":0},{"date":"2026-01-01","count":0},{"date":"2026-01-08","count":0},{"date":"2026-01-15","count":0},{"date":"2026-01-22","count":2},{"date":"2026-01-29","count":0},{"date":"2026-02-05","count":0},{"date":"2026-02-12","count":6},{"date":"2026-02-19","count":0},{"date":"2026-02-26","count":1},{"date":"2026-03-05","count":0},{"date":"2026-03-12","count":0},{"date":"2026-03-19","count":0},{"date":"2026-03-26","count":0},{"date":"2026-04-02","count":0},{"date":"2026-04-09","count":0},{"date":"2026-04-16","count":0},{"date":"2026-04-23","count":0},{"date":"2026-04-30","count":0},{"date":"2026-05-07","count":0},{"date":"2026-05-14","count":0},{"date":"2026-05-21","count":0},{"date":"2026-05-28","count":0},{"date":"2026-06-04","count":0},{"date":"2026-06-11","count":0},{"date":"2026-06-18","count":0},{"date":"2026-06-25","count":0},{"date":"2026-07-02","count":0},{"date":"2026-07-09","count":0},{"date":"2026-07-16","count":0},{"date":"2026-07-23","count":0},{"date":"2026-07-30","count":0},{"date":"2026-08-06","count":0},{"date":"2026-08-13","count":0},{"date":"2026-08-20","count":0},{"date":"2026-08-27","count":0},{"date":"2026-09-03","count":10},{"date":"2026-09-10","count":3},{"date":"2026-09-17","count":0},{"date":"2026-09-24","count":1},{"date":"2026-10-01","count":1},{"date":"2026-10-08","count":43},{"date":"2026-10-15","count":11},{"date":"2026-10-22","count":29},{"date":"2026-10-29","count":30},{"date":"2026-11-05","count":6},{"date":"2026-11-12","count":0},{"date":"2026-11-19","count":0},{"date":"2026-01-02","count":0},{"date":"2026-01-09","count":0},{"date":"2026-01-16","count":0},{"date":"2026-01-23","count":0},{"date":"2026-01-30","count":0},{"date":"2026-02-06","count":0},{"date":"2026-02-13","count":3},{"date":"2026-02-20","count":0},{"date":"2026-02-27","count":0},{"date":"2026-03-06","count":3},{"date":"2026-03-13","count":0},{"date":"2026-03-20","count":0},{"date":"2026-03-27","count":0},{"date":"2026-04-03","count":0},{"date":"2026-04-10","count":0},{"date":"2026-04-17","count":0},{"date":"2026-04-24","count":0},{"date":"2026-05-01","count":0},{"date":"2026-05-08","count":0},{"date":"2026-05-15","count":0},{"date":"2026-05-22","count":0},{"date":"2026-05-29","count":0},{"date":"2026-06-05","count":0},{"date":"2026-06-12","count":0},{"date":"2026-06-19","count":0},{"date":"2026-06-26","count":0},{"date":"2026-07-03","count":0},{"date":"2026-07-10","count":0},{"date":"2026-07-17","count":0},{"date":"2026-07-24","count":0},{"date":"2026-07-31","count":0},{"date":"2026-08-07","count":0},{"date":"2026-08-14","count":0},{"date":"2026-08-21","count":0},{"date":"2026-08-28","count":0},{"date":"2026-09-04","count":0},{"date":"2026-09-11","count":0},{"date":"2026-09-18","count":2},{"date":"2026-09-25","count":1},{"date":"2026-10-02","count":1},{"date":"2026-10-09","count":87},{"date":"2026-10-16","count":19},{"date":"2026-10-23","count":6},{"date":"2026-10-30","count":4},{"date":"2026-11-06","count":16},{"date":"2026-11-13","count":0},{"date":"2026-11-20","count":0},{"date":"2026-01-03","count":0},{"date":"2026-01-10","count":0},{"date":"2026-01-17","count":0},{"date":"2026-01-24","count":1},{"date":"2026-01-31","count":0},{"date":"2026-02-07","count":0},{"date":"2026-02-14","count":1},{"date":"2026-02-21","count":1},{"date":"2026-02-28","count":1},{"date":"2026-03-07","count":0},{"date":"2026-03-14","count":0},{"date":"2026-03-21","count":0},{"date":"2026-03-28","count":0},{"date":"2026-04-04","count":0},{"date":"2026-04-11","count":0},{"date":"2026-04-18","count":0},{"date":"2026-04-25","count":0},{"date":"2026-05-02","count":0},{"date":"2026-05-09","count":0},{"date":"2026-05-16","count":0},{"date":"2026-05-23","count":0},{"date":"2026-05-30","count":0},{"date":"2026-06-06","count":0},{"date":"2026-06-13","count":0},{"date":"2026-06-20","count":0},{"date":"2026-06-27","count":0},{"date":"2026-07-04","count":0},{"date":"2026-07-11","count":0},{"date":"2026-07-18","count":0},{"date":"2026-07-25","count":0},{"date":"2026-08-01","count":0},{"date":"2026-08-08","count":0},{"date":"2026-08-15","count":0},{"date":"2026-08-22","count":0},{"date":"2026-08-29","count":0},{"date":"2026-09-05","count":0},{"date":"2026-09-12","count":2},{"date":"2026-09-19","count":4},{"date":"2026-09-26","count":0},{"date":"2026-10-03","count":4},{"date":"2026-10-10","count":19},{"date":"2026-10-17","count":6},{"date":"2026-10-24","count":19},{"date":"2026-10-31","count":12},{"date":"2026-11-07","count":9},{"date":"2026-11-14","count":0},{"date":"2026-11-21","count":6}]</script><noscript> <p data-astro-cid-ifgzdfbq>
+JavaScript is required for the live heatmap. Visit  <a href="https://github.com/Haoyan-collab" data-astro-cid-ifgzdfbq>GitHub</a> to view activity directly.
+</p> </noscript> </github-activity>  </section> <script type="module" src="/_astro/GithubActivity.astro_astro_type_script_index_0_lang.C70_q7EU.js"></script> </div>  </main> <back-to-top data-astro-cid-lxgphsac="true"> <button type="button" data-button data-variant="outline" data-size="square" hidden title="Back to top" aria-label="Back to top" data-astro-cid-lxgphsac="true" data-astro-cid-ackudsgp>  <back-to-top-icon data-astro-cid-lxgphsac="true"><svg viewBox="0 0 24 24" data-astro-cid-lxgphsac="true" width="1.25rem" height="1.25rem" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none"><path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M19 5a1 1 0 1 0 0-2H5a1 1 0 1 0 0 2zM7.05 12.703a1 1 0 0 0 1.415 0L11 10.167V20a1 1 0 0 0 2 0v-9.833l2.536 2.536a1 1 0 0 0 1.414-1.415l-4.243-4.242a1 1 0 0 0-1.414 0L7.05 11.288a1 1 0 0 0 0 1.415"/></g> </svg></back-to-top-icon>  </button> </back-to-top> <script type="module">var e=class extends HTMLElement{button=null;updateVisibility=()=>{this.button?.toggleAttribute(`hidden`,window.scrollY<=300)};scrollToTop=()=>{let e=window.matchMedia(`(prefers-reduced-motion: reduce)`).matches;window.scrollTo({top:0,behavior:e?`instant`:`smooth`})};connectedCallback(){this.button=this.querySelector(`button`),this.button&&(this.button.addEventListener(`click`,this.scrollToTop),window.addEventListener(`scroll`,this.updateVisibility,{passive:!0}),this.updateVisibility())}disconnectedCallback(){this.button?.removeEventListener(`click`,this.scrollToTop),window.removeEventListener(`scroll`,this.updateVisibility)}};customElements.get(`back-to-top`)||customElements.define(`back-to-top`,e);</script>  <footer data-astro-cid-oenwriqq> <div class="footer-inner" data-astro-cid-oenwriqq>  <p data-astro-cid-oenwriqq>
+&copy; <span id="current-year" data-astro-cid-oenwriqq></span> Haoyan (Kilian) Shi.
+ All rights reserved. </p> <p class="footer-location" data-astro-cid-oenwriqq> <svg viewBox="0 0 24 24" data-astro-cid-oenwriqq="true" width="1em" height="1em" role="presentation" aria-hidden="true" data-astro-cid-vopqvgml> <g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2a9 9 0 0 1 9 9c0 3.074-1.676 5.59-3.442 7.395a20.4 20.4 0 0 1-2.876 2.416l-.426.29l-.2.133l-.377.24l-.336.205l-.416.242a1.87 1.87 0 0 1-1.854 0l-.416-.242l-.52-.32l-.192-.125l-.41-.273a20.6 20.6 0 0 1-3.093-2.566C4.676 16.589 3 14.074 3 11a9 9 0 0 1 9-9m0 2a7 7 0 0 0-7 7c0 2.322 1.272 4.36 2.871 5.996a18 18 0 0 0 2.222 1.91l.458.326q.222.155.427.288l.39.25l.343.209l.289.169l.455-.269l.367-.23q.293-.186.627-.417l.458-.326a18 18 0 0 0 2.222-1.91C17.728 15.361 19 13.322 19 11a7 7 0 0 0-7-7m0 3a4 4 0 1 1 0 8a4 4 0 0 1 0-8m0 2a2 2 0 1 0 0 4a2 2 0 0 0 0-4"/></g> </svg> <span data-astro-cid-oenwriqq>Carnegie Mellon University, Pittsburgh, PA</span> </p>   </div> </footer> <script type="module">var e=document.getElementById(`current-year`);e&&(e.textContent=new Date().getFullYear().toString());</script> <script type="module">var e,t=null;function n(){let e=document.getElementById(`main-header`);e&&document.documentElement.style.setProperty(`--header-height`,`${e.offsetHeight}px`)}function r(){let r=document.getElementById(`main-header`);if(r){if(r===t){n();return}e?.disconnect(),e=new ResizeObserver(n),e.observe(r),t=r,n()}}r(),document.addEventListener(`astro:after-swap`,r);</script></body> </html> <script type="module" src="/_astro/index.astro_astro_type_script_index_0_lang.By35IoQU.js"></script>
