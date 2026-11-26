@@ -4,6 +4,8 @@
  * Overrides are applied to :root, kept in localStorage, and exported as CSS
  * ready to paste into src/styles/color.css. Not rendered in production builds.
  */
+import "./color-studies.css"
+
 const TOKENS = [
   "background",
   "foreground",
@@ -27,6 +29,15 @@ const TOKENS = [
       Preset
       <select data-tuner-preset>
         <option value="default">Current (color.css)</option>
+        <optgroup label="Black + violet studies">
+          <option value="quiet-violet">Quiet Violet · subtle accents</option>
+          <option value="violet-editorial">
+            Violet Editorial · lavender headings
+          </option>
+          <option value="violet-halo">
+            Violet Halo · soft violet atmosphere
+          </option>
+        </optgroup>
         <option value="original">Original theme default</option>
         <option value="ocean">Ocean · navy + teal</option>
         <option value="paper">Paper · warm ivory + amber</option>
@@ -43,6 +54,7 @@ const TOKENS = [
         </optgroup>
       </select>
     </label>
+    <p class="color-tuner-description" data-tuner-description></p>
     <table>
       <thead>
         <tr>
@@ -100,7 +112,8 @@ const TOKENS = [
     position: absolute;
     inset-block-end: 3rem;
     inset-inline-start: 0;
-    max-block-size: 75vh;
+    inline-size: min(23rem, calc(100vw - 2rem));
+    max-block-size: 75dvh;
     overflow: auto;
     padding: 0.75rem;
     border: 1px solid var(--border);
@@ -113,6 +126,11 @@ const TOKENS = [
   .color-tuner-title {
     margin: 0 0 0.5rem;
     font-weight: 600;
+  }
+
+  .color-tuner-description {
+    margin-block: 0.5rem;
+    line-height: 1.5;
   }
 
   .color-tuner-title span,
@@ -130,6 +148,7 @@ const TOKENS = [
 
   .color-tuner select {
     flex: 1;
+    min-inline-size: 0;
     padding: 0.2rem;
     border: 1px solid var(--border);
     border-radius: 0.25rem;
@@ -178,6 +197,7 @@ const TOKENS = [
 </style>
 
 <script>
+  import studyCSS from "./color-studies.css?raw"
   type Scheme = "light" | "dark"
   type TokenOverride = Partial<Record<Scheme, string>> & {
     /** Explicit alpha per scheme; falls back to the stylesheet's alpha. */
@@ -351,6 +371,55 @@ const TOKENS = [
     },
   }
 
+  const STUDIES: Record<string, string> = {
+    "quiet-violet":
+      "Closest to Mono: black canvas, white name, lavender tagline and header icons. A fine violet divider adds color on touchscreens without relying on hover.",
+    "violet-editorial":
+      "A clearer violet identity: lavender name and section headings, with neutral body text and a black canvas. No background glow.",
+    "violet-halo":
+      "A soft violet halo behind the profile and a fine avatar ring. The page stays nearly black, with restrained lavender headings.",
+  }
+
+  const violetBase = {
+    ...PRESETS.mono,
+    primary: ["#6d28d9", "#a78bfa"] as [string, string],
+    accent: ["#6d28d9", "#c4b5fd"] as [string, string],
+    ring: ["#7c3aed", "#a78bfa"] as [string, string],
+  }
+  PRESETS["quiet-violet"] = {
+    ...violetBase,
+    "study-name": ["#171717", "#ededed"],
+    "study-heading": ["#171717", "#ededed"],
+    "study-tagline": ["#6d28d9", "#b9a5df"],
+    "study-icon": ["#716083", "#ae9cce"],
+    "study-line": ["#e6dff1", "#30263e"],
+    "study-wash": ["transparent", "transparent"],
+    "study-avatar-border": ["transparent", "transparent"],
+  }
+  PRESETS["violet-editorial"] = {
+    ...violetBase,
+    "study-name": ["#5b21b6", "#d4c4f2"],
+    "study-heading": ["#5b21b6", "#c8b6e8"],
+    "study-tagline": ["#6d28d9", "#b9a5df"],
+    "study-icon": ["#715a8a", "#b9a5df"],
+    "study-line": ["#ddd0ee", "#3c2c50"],
+    "study-wash": ["transparent", "transparent"],
+    "study-avatar-border": ["transparent", "transparent"],
+  }
+  PRESETS["violet-halo"] = {
+    ...violetBase,
+    background: ["#fdfcfe", "#0c0a0f"],
+    muted: ["#f3eff8", "#1b1623"],
+    border: ["#e5ddee", "#302639"],
+    "study-name": ["#4c1d95", "#e0d4f4"],
+    "study-heading": ["#5b21b6", "#c8b6e8"],
+    "study-tagline": ["#6d28d9", "#c3ace3"],
+    "study-icon": ["#715a8a", "#baa5d6"],
+    "study-line": ["#e1d5ef", "#382943"],
+    "study-wash": ["#ede5f780", "#58357933"],
+    "study-avatar-border": ["#c4a9e0", "#755592"],
+  }
+
   const STORAGE_KEY = "color-tuner"
   const root = document.documentElement
 
@@ -425,8 +494,21 @@ const TOKENS = [
   function presetOverrides(name: string): Overrides {
     const preset = PRESETS[name]
     if (!preset) return {}
+    const colors =
+      name in STUDIES
+        ? preset
+        : {
+            ...preset,
+            "study-name": preset.foreground,
+            "study-heading": preset.foreground,
+            "study-tagline": preset.foreground,
+            "study-icon": preset["muted-foreground"],
+            "study-line": ["transparent", "transparent"],
+            "study-wash": ["transparent", "transparent"],
+            "study-avatar-border": ["transparent", "transparent"],
+          }
     return Object.fromEntries(
-      Object.entries(preset).map(([token, [lightColor, darkColor]]) => {
+      Object.entries(colors).map(([token, [lightColor, darkColor]]) => {
         const light = toHex(lightColor)
         const dark = toHex(darkColor)
         return [
@@ -447,6 +529,24 @@ const TOKENS = [
     }
   }
 
+  function applyStudy() {
+    const name = localStorage.getItem(`${STORAGE_KEY}-preset`) ?? "default"
+    root.toggleAttribute("data-color-study", name in STUDIES)
+  }
+
+  // Share a study URL with another device; its own light/dark preference stays intact.
+  const requestedPreset = new URLSearchParams(location.search).get("palette")
+  if (
+    requestedPreset &&
+    (requestedPreset === "default" || PRESETS[requestedPreset])
+  ) {
+    localStorage.setItem(`${STORAGE_KEY}-preset`, requestedPreset)
+    saveOverrides(presetOverrides(requestedPreset))
+    const url = new URL(location.href)
+    url.searchParams.delete("palette")
+    history.replaceState(history.state, "", url)
+  }
+
   function initTuner() {
     const panel = document.querySelector<HTMLElement>("[data-color-tuner]")
     if (!panel || panel.dataset.ready === "true") return
@@ -457,7 +557,17 @@ const TOKENS = [
     const presetSelect = panel.querySelector<HTMLSelectElement>(
       "[data-tuner-preset]",
     )!
+    const description = panel.querySelector<HTMLElement>(
+      "[data-tuner-description]",
+    )!
     let overrides = loadOverrides()
+
+    function syncDescription() {
+      description.textContent =
+        STUDIES[presetSelect.value] ??
+        "Adjust colors below; changes stay in this browser. Reset returns to color.css."
+      applyStudy()
+    }
 
     function syncInputs() {
       for (const input of inputs) {
@@ -483,10 +593,12 @@ const TOKENS = [
       saveOverrides(overrides)
       localStorage.setItem(`${STORAGE_KEY}-preset`, presetSelect.value)
       syncInputs()
+      syncDescription()
       status.textContent = `Preset: ${presetSelect.selectedOptions[0].text}`
     })
 
     syncInputs()
+    syncDescription()
     for (const input of inputs) {
       const token = input.dataset.token!
       const scheme = input.dataset.scheme as Scheme
@@ -508,7 +620,18 @@ const TOKENS = [
         const css = tokens
           .map((t) => `  --${t}: ${tokenValue(t, overrides)};`)
           .join("\n")
-        await navigator.clipboard.writeText(css)
+        const exportCSS =
+          `:root {\n${css}\n}` +
+          (presetSelect.value in STUDIES
+            ? `\n\n${studyCSS.replaceAll(":root[data-color-study]", ":root")}`
+            : "")
+        try {
+          await navigator.clipboard.writeText(exportCSS)
+        } catch {
+          status.textContent =
+            "Clipboard unavailable. Use localhost on this computer to copy CSS."
+          return
+        }
         status.textContent = `Copied ${tokens.length} token(s).`
       })
 
@@ -518,15 +641,18 @@ const TOKENS = [
       presetSelect.value = "default"
       localStorage.setItem(`${STORAGE_KEY}-preset`, "default")
       syncInputs()
+      syncDescription()
       status.textContent = "Reset to color.css."
     })
   }
 
   applyOverrides(loadOverrides())
+  applyStudy()
   initTuner()
   // ClientRouter replaces <html> attributes on navigation; re-apply overrides.
-  document.addEventListener("astro:after-swap", () =>
-    applyOverrides(loadOverrides()),
-  )
+  document.addEventListener("astro:after-swap", () => {
+    applyOverrides(loadOverrides())
+    applyStudy()
+  })
   document.addEventListener("astro:page-load", initTuner)
 </script>

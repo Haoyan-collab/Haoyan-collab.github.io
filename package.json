@@ -28,6 +28,7 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "photos": "node scripts/photo-manager/server.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",

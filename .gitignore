@@ -14,3 +14,7 @@ pnpm-debug.log*
 .claude/worktrees/
 .playwright-cli/
 output/
+
+# Keep full-resolution personal photo originals local; publish selected WebP exports.
+src/assets/life/photos/**
+!src/assets/life/photos/.gitkeep

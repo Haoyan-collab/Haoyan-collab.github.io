@@ -1,0 +1,132 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import { hasLifePhotos, lifeAlbums } from "@/lib/life-gallery"
+---
+
+<Layout
+  title="Life, in moments"
+  description="The places, people, and small moments that give my life its color."
+  noindex={!hasLifePhotos}
+>
+  <header class="life-intro">
+    <h1>Life, in moments</h1>
+    <p>The places, people, and small moments that give my life its color.</p>
+  </header>
+  <section class="photography" aria-labelledby="photography-title">
+    <header class="photography-intro">
+      <h2 id="photography-title">Photography</h2>
+      <p>A way to notice the everyday, and hold on to it.</p>
+      <nav aria-label="Photo albums">
+        {lifeAlbums.map((album) => <a href={`#${album.id}`}>{album.label}</a>)}
+      </nav>
+    </header>
+    {lifeAlbums.map((album) => (
+    <section id={album.id} class="album" aria-labelledby={`${album.id}-title`}>
+      <h3 id={`${album.id}-title`}>{album.label}</h3>
+      <div class="photo-grid">
+        {album.photos.map((photo) => (
+          <figure>
+            <a href={photo.image} target="_blank" rel="noopener" aria-label={`View larger photo: ${photo.alt || photo.caption || album.label}`}>
+              <img src={photo.image!.replace(".webp", "-small.webp")} srcset={`${photo.image!.replace(".webp", "-small.webp")} ${Math.min(640, photo.width!)}w, ${photo.image} ${photo.width}w`} sizes="(max-width: 639px) 100vw, 450px" width={photo.width} height={photo.height} alt={photo.alt || photo.caption || `${album.label} photo`} loading="lazy" decoding="async" />
+            </a>
+            {photo.caption && <figcaption>{photo.caption}</figcaption>}
+          </figure>
+        ))}
+      </div>
+    </section>
+  ))}
+    {!hasLifePhotos && import.meta.env.DEV && <p class="empty">照片尚未分类。在本地运行 <code>pnpm photos</code>，保存分类后刷新这里。</p>}
+  </section>
+  <a class="back-link" href="/">← Back to home</a>
+</Layout>
+
+<style>
+  .life-intro {
+    display: grid;
+    gap: var(--space-s);
+    padding-block: var(--space-m);
+  }
+  .life-intro h1 {
+    margin: 0;
+    color: var(--study-name);
+    font-size: var(--step-4);
+  }
+  .life-intro p {
+    margin: 0;
+    color: var(--muted-foreground);
+  }
+  .photography {
+    display: grid;
+    gap: var(--space-m);
+  }
+  .photography-intro {
+    display: grid;
+    gap: var(--space-xs);
+  }
+  .photography-intro h2 {
+    margin: 0;
+    color: var(--study-heading);
+    font-size: var(--step-2);
+  }
+  .photography-intro p {
+    margin: 0;
+    color: var(--muted-foreground);
+    font-size: var(--step--1);
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+  }
+  nav a,
+  .back-link {
+    color: var(--accent);
+    text-underline-offset: 0.25em;
+  }
+  .album {
+    scroll-margin-block-start: calc(var(--header-height, 4rem) + 1rem);
+  }
+  .album h3 {
+    margin-block: 0 var(--space-s);
+    color: var(--study-heading);
+    font-size: var(--step-1);
+  }
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-m) var(--space-s);
+    align-items: start;
+  }
+  figure {
+    margin: 0;
+    min-width: 0;
+  }
+  figure a {
+    display: block;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  figcaption {
+    margin-block-start: var(--space-2xs);
+    color: var(--muted-foreground);
+    font-size: var(--step--1);
+    overflow-wrap: anywhere;
+  }
+  .back-link {
+    align-self: flex-start;
+    margin-block: var(--space-m);
+  }
+  .empty {
+    color: var(--muted-foreground);
+  }
+  @media (width < 40rem) {
+    .photo-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

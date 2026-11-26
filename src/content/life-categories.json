@@ -1,0 +1,5 @@
+[
+  { "id": "trip", "label": "Travels" },
+  { "id": "college", "label": "College Days" },
+  { "id": "us", "label": "Life in the US" }
+]

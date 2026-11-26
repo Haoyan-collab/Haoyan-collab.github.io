@@ -22,22 +22,28 @@
 */
 
 :root {
-  /* Mono: neutral + indigo. Previous theme default is kept in the comment above
-     and as the "Original" preset in the dev color tuner. */
-  --background: light-dark(#ffffff, #0a0a0a);
+  /* Violet Halo: nearly black, with restrained lavender accents. */
+  --background: light-dark(#fdfcfe, #0c0a0f);
   --foreground: light-dark(#171717, #ededed);
-  --primary: light-dark(#4f46e5, #818cf8);
+  --primary: light-dark(#6d28d9, #a78bfa);
   --primary-foreground: light-dark(#ffffff, #0a0a0a);
-  --muted: light-dark(#f4f4f5, #18181b);
+  --muted: light-dark(#f3eff8, #1b1623);
   --muted-foreground: light-dark(#71717a, #a1a1aa);
-  --accent: light-dark(#4f46e5, #a5b4fc);
+  --accent: light-dark(#6d28d9, #c4b5fd);
   --accent-foreground: light-dark(#ffffff, #0a0a0a);
+  --study-name: light-dark(#4c1d95, #e0d4f4);
+  --study-heading: light-dark(#5b21b6, #c8b6e8);
+  --study-tagline: light-dark(#6d28d9, #c3ace3);
+  --study-icon: light-dark(#715a8a, #baa5d6);
+  --study-line: light-dark(#e1d5ef, #382943);
+  --study-wash: light-dark(#ede5f780, #58357933);
+  --study-avatar-border: light-dark(#c4a9e0, #755592);
   --interactive-background: color-mix(in oklab, var(--accent) 18%, transparent);
   --interactive-border: color-mix(in oklab, var(--accent) 55%, var(--border));
   --interactive-foreground: var(--foreground);
   --destructive: light-dark(#dc2626, #f87171);
-  --border: light-dark(#e4e4e7, #27272a);
-  --ring: light-dark(#a1a1aa, #52525b);
+  --border: light-dark(#e5ddee, #302639);
+  --ring: light-dark(#7c3aed, #a78bfa);
 
   color-scheme: light dark;
 }
@@ -72,4 +78,42 @@ body {
 ::selection {
   background-color: var(--accent);
   color: var(--accent-foreground);
+}
+
+:root #profile {
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    var(--study-wash),
+    transparent 72%
+  );
+}
+
+:root .profile-heading h1 {
+  color: var(--study-name);
+}
+
+:root .profile-tagline {
+  color: var(--study-tagline);
+}
+
+:root .profile-avatar {
+  outline: 1px solid var(--study-avatar-border);
+  outline-offset: 5px;
+}
+
+:root .profile-header {
+  padding-block-end: var(--space-s);
+  border-block-end: 1px solid var(--study-line);
+}
+
+:root .site-brand .profile-link-icon {
+  color: var(--study-icon);
+}
+
+:root .site-brand .profile-link-icon:hover {
+  color: var(--accent);
+}
+
+:root .section-block section-heading h2 {
+  color: var(--study-heading);
 }

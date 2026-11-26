@@ -1,0 +1,38 @@
+/* Activated only by the development color tuner. */
+:root[data-color-study] #profile {
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    var(--study-wash),
+    transparent 72%
+  );
+}
+
+:root[data-color-study] .profile-heading h1 {
+  color: var(--study-name);
+}
+
+:root[data-color-study] .profile-tagline {
+  color: var(--study-tagline);
+}
+
+:root[data-color-study] .profile-avatar {
+  outline: 1px solid var(--study-avatar-border);
+  outline-offset: 5px;
+}
+
+:root[data-color-study] .profile-header {
+  padding-block-end: var(--space-s);
+  border-block-end: 1px solid var(--study-line);
+}
+
+:root[data-color-study] .site-brand .profile-link-icon {
+  color: var(--study-icon);
+}
+
+:root[data-color-study] .site-brand .profile-link-icon:hover {
+  color: var(--accent);
+}
+
+:root[data-color-study] .section-block section-heading h2 {
+  color: var(--study-heading);
+}

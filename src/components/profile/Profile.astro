@@ -13,6 +13,7 @@ import { getProfileLinkPlacement } from "./helper"
 import { Content as AboutContent } from "@/content/about.md"
 
 import "@/styles/callout.css"
+import { hasLifePhotos } from "@/lib/life-gallery"
 
 interface Props {
   profile: ProfileConfig
@@ -84,6 +85,8 @@ const aboutLinks = getProfileLinkPlacement("about")
   <AboutContent />
 </prose-content>
 
+{hasLifePhotos && <p class="life-link"><a href="/life">A few moments from my life →</a></p>}
+
 {aboutLinks.length > 0 && (
     <footer class="profile-footer">
       <ProfileLinks keys={aboutLinks} />
@@ -91,6 +94,17 @@ const aboutLinks = getProfileLinkPlacement("about")
   )}
 
 <style>
+  .life-link {
+    color: var(--muted-foreground);
+    font-size: var(--step--1);
+    margin: 0;
+  }
+
+  .life-link a {
+    color: var(--accent);
+    text-underline-offset: 0.2em;
+  }
+
   .profile-header {
     display: flex;
     flex-direction: column;
