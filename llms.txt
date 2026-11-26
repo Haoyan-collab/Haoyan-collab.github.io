@@ -8,7 +8,7 @@ This file contains information about this website for AI language models.
 - Owner: Haoyan (Kilian) Shi - Machine Learning | Computer Vision | AI Systems
 - Content: Academic research, blog posts, projects, and tools
 - Language: English
-- Last Updated: 2026-11-25
+- Last Updated: 2026-11-26
 
 ## Content Overview
 
